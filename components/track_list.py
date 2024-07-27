@@ -5,7 +5,7 @@ def show(tracks):
     st.write("## Tracks fished 🎣")
     df = pd.DataFrame([track.__dict__ for track in tracks])
 
-    st.data_editor(
+    st.dataframe(
         df,
         column_config={
             "title": st.column_config.TextColumn(
