@@ -24,6 +24,8 @@ The application is deployed on [Streamlit](https://traxfish.streamlit.app/)
 
 ## App structure
 
+`index.py` is the entry point
+
 ```bash
 .
 ├── Makefile
