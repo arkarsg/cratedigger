@@ -1,0 +1,2 @@
+class TracksQueryException(Exception):
+    pass
