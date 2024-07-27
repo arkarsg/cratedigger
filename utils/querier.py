@@ -1,8 +1,9 @@
-from .audio_processing import process_audio_file
+from . import audio_processing as ad
 from tracks_exceptions import InvalidUrlException, NoSourceException, TooManySourceException
 import streamlit as st
 from io import BytesIO
 from urllib.parse import urlparse
+
 
 def validate_data(tracks_request):
     if tracks_request.file and tracks_request.url:
@@ -18,7 +19,7 @@ def valid_url(url):
         return False
 
 def file_handler(file, scan_freq):
-    return process_audio_file(file, api_key=st.secrets["api_key"], chunk_length_ms=scan_freq * 1000)
+    return ad.process_audio_file(file, api_key=st.secrets["api_key"], chunk_length_ms=scan_freq * 1000)
 
 def link_handler(link):
     raise NotImplementedError("Link handler not implemented")

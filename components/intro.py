@@ -17,6 +17,6 @@ def intro():
         
         # Get started
         1. Upload your mix **or** insert a link to your mix
-        2. Click "Find IDs"
+        2. Click "Find
     """
     )

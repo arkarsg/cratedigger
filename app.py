@@ -1,6 +1,6 @@
 import streamlit as st
 from components import intro, track_form as tp, track_list
-from utils import querier
+from utils import querier, audio_processing as ad
 from tracks_exceptions import InvalidUrlException, TooManySourceException, NoSourceException 
 
 def run():
@@ -11,9 +11,8 @@ def run():
         data = trax.get_form_data()
         try:
             querier.validate_data(data)
-            with st.spinner(f"Fishing tracks from *{data.url or data.file.name}* every *{data.scan_freqeuncy} seconds*"):
-                result = querier.query_tracks(data)
-                track_list.show(result)
+            result = querier.query_tracks(data)
+            track_list.show(result)
         except NotImplementedError:
             st.info("Feature coming soon!")
         except InvalidUrlException as i:
