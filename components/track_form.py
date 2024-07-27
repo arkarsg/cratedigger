@@ -28,7 +28,9 @@ class Form:
             )
             
             self.scan_frequency = st.slider(
-                label="Scan frequency"
+                label="Scan frequency",
+                min_value=4,
+                max_value=100
             )
 
             submitted = st.form_submit_button("Get track IDs")
