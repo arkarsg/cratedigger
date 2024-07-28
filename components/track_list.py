@@ -3,7 +3,7 @@ import streamlit as st
 
 def show(tracks):
     st.write("## Tracks fished 🎣")
-    df = pd.DataFrame([track.__dict__ for track in tracks])
+    df = pd.DataFrame([flatten_track(track) for track in tracks])
 
     st.dataframe(
         df,
