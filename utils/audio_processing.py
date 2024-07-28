@@ -1,32 +1,34 @@
 import io
-import os
 import requests
 from pydub import AudioSegment
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from dataclasses import dataclass, field
-import streamlit as st
-
-@dataclass(frozen=True)
-class Track:
-    title: str = field(hash=True)
-    artist: str = field(hash=True)
-    genre: str = field(hash=True)
-    spotify_link: str = field(hash=False, compare=False)
-    cover_art: str = field(hash=False, compare=False)
-
-    def __eq__(self, value: object) -> bool:
-        return self.title == value.title and \
-                self.artist == value.artist and \
-                self.genre == value.genre
-                
+from .models import Track, ShazamAPI, TrackStorage 
+     
+api = ShazamAPI()
+track_store = TrackStorage()
+           
 def split_audio(file_path, chunk_length_ms):
     audio = AudioSegment.from_file(file_path)
     chunks = []
     for start in range(0, len(audio), chunk_length_ms):
         chunk = audio[start:start + chunk_length_ms]
-        chunks.append(chunk)
+        chunks.append((chunk, start, start+chunk_length_ms))
     return chunks
 
+def process(file, chunk_length_ms=60000):
+    chunks = split_audio(file, chunk_length_ms)
+    with ThreadPoolExecutor() as executor:
+        executor.map(worker, chunks)
+    return track_store.get_tracks()
+    
+def worker(chunk):
+    chunk_bytes, start, end = chunk
+    buffer = io.BytesIO()
+    chunk_bytes.export(buffer, format="mp3")
+    track = api.get_track_from_chunk(buffer)
+    track_store.add_track(track=track, start_offset=start, end_offset=end)
+    return
+    
 
 def send_audio_to_shazam(chunk, api_key):
     url = "https://shazam-song-recognition-api.p.rapidapi.com/recognize/file"
@@ -69,8 +71,6 @@ def process_chunk(chunk, chunk_number, api_key):
 
 
 def process_audio_file(file_path, api_key, chunk_length_ms=60000):
-    with st.status("Fishing tracks...", expanded=True) as s:
-        st.write("Splitting audio into chunks...")
         chunks = split_audio(file_path, chunk_length_ms)
         all_track_info = [None] * len(chunks)
         track_set = set()  # keep track of unique tracks
@@ -80,18 +80,12 @@ def process_audio_file(file_path, api_key, chunk_length_ms=60000):
 
             for future in as_completed(futures):
                 chunk_number, track_info = future.result()
-                st.write(f"Getting track from chunk " + str(chunk_number))
                 all_track_info[chunk_number] = track_info
 
-        st.write("Removing repeated tracks...")
         final_track_info = []
         for track in all_track_info:
                 if track:
                     if track not in track_set:
                         track_set.add(track)
                         final_track_info.append(track)
-        st.write("Done")
-        s.update(
-            label="Fishing complete!", state="complete", expanded=False
-        )
         return final_track_info

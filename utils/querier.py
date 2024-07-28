@@ -19,7 +19,14 @@ def valid_url(url):
         return False
 
 def file_handler(file, scan_freq):
-    return ad.process_audio_file(file, api_key=st.secrets["api_key"], chunk_length_ms=scan_freq * 1000)
+    tracks = ad.process(file, chunk_length_ms=scan_freq * 1000)
+    return df_adapter(tracks)
+
+# list of (track_id, MixTrack) sorted by start time
+def df_adapter(tracks):
+    return [track for _, track in tracks]
+    
+    
 
 def link_handler(link):
     raise NotImplementedError("Link handler not implemented")

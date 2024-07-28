@@ -8,6 +8,7 @@ def show(tracks):
     st.dataframe(
         df,
         column_config={
+            "track_id": None,
             "title": st.column_config.TextColumn(
                 "Track",
                 help="Name of the track"
@@ -30,3 +31,11 @@ def show(tracks):
         },
         hide_index=True,
     )
+
+def flatten_track(track):
+    track_dict =  {
+        "start": track.start_offset,
+        "end": track.end_offset,
+    }
+    res = {**track_dict, **track.track.__dict__}
+    return res
