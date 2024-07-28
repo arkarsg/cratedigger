@@ -10,9 +10,10 @@ def run():
     if submitted:
         data = trax.get_form_data()
         try:
-            querier.validate_data(data)
-            result = querier.query_tracks(data)
-            track_list.show(result)
+            with st.spinner("Finding tracks... *(It may take a while)*"):
+                querier.validate_data(data)
+                result = querier.query_tracks(data)
+                track_list.show(result)
         except NotImplementedError:
             st.info("Feature coming soon!")
         except InvalidUrlException as i:

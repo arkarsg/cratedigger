@@ -4,6 +4,10 @@ import streamlit as st
 def show(tracks):
     st.write("## Tracks fished 🎣")
     df = pd.DataFrame([flatten_track(track) for track in tracks])
+    df['start'] = pd.to_datetime(df['start'],
+             unit='ms').dt.strftime('%H:%M:%S')
+    df['end'] = pd.to_datetime(df['end'],
+             unit='ms').dt.strftime('%H:%M:%S')
 
     st.dataframe(
         df,
