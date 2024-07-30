@@ -2,7 +2,7 @@
 
 🐡 Comment "ID?" on DJ mixes no more 😎
 
-The application is deployed on [Streamlit](https://traxfish.streamlit.app/)
+The application is deployed on [Streamlit](https://cratedigger.streamlit.app/)
 
 ## Development
 
