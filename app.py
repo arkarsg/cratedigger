@@ -13,8 +13,6 @@ async def run():
             querier.validate_data(data)
             result = await querier.query_tracks(data)
             track_list.show(result)
-        except NotImplementedError:
-            st.info("Feature coming soon!")
         except InvalidUrlException as i:
             st.error(i.message)
         except TooManySourceException as t:
