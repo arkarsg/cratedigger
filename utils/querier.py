@@ -24,8 +24,7 @@ def file_handler(file, scan_freq):
 
 # list of (track_id, MixTrack) sorted by start time
 def df_adapter(tracks):
-    return [track for _, track in tracks]
-    
+    return [track for _, track in tracks] 
     
 
 def link_handler(link):
