@@ -21,6 +21,7 @@ async def process(file, chunk_length_ms=60000):
 
     st.write("Splitting audio into chunks")
     chunks = split_audio(file, chunk_length_ms)
+    st.write("Split audio into chunks")
 
     prog = 0
     prog_diff = 100 // len(chunks)
