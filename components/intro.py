@@ -1,11 +1,6 @@
 import streamlit as st
 
 def intro():
-    st.set_page_config(
-        page_title="TraxFish",
-        page_icon="🐡",
-    )
-
     st.write("# TraxFish 🐡🔥")
 
     st.markdown(
