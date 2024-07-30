@@ -3,7 +3,6 @@ from io import BytesIO
 from urllib.parse import urlparse
 from . import process
 
-
 def validate_data(tracks_request):
     if tracks_request.file and tracks_request.url:
         raise TooManySourceException
@@ -17,8 +16,8 @@ def valid_url(url):
     except ValueError:
         return False
 
-def file_handler(file, scan_freq):
-    tracks = process(file, chunk_length_ms=scan_freq * 1000)
+async def file_handler(file, scan_freq):
+    tracks = await process(file, chunk_length_ms=scan_freq * 1000)
     return df_adapter(tracks)
 
 # list of (track_id, MixTrack) sorted by start time

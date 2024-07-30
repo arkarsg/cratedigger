@@ -3,7 +3,7 @@ from components import intro, track_form as tp, track_list
 from utils import querier
 from tracks_exceptions import InvalidUrlException, TooManySourceException, NoSourceException 
 
-def run():
+async def run():
     intro.intro()
     trax = tp.Form()
     submitted = trax.display_form()
@@ -11,7 +11,7 @@ def run():
         data = trax.get_form_data()
         try:
             querier.validate_data(data)
-            result = querier.query_tracks(data)
+            result = await querier.query_tracks(data)
             track_list.show(result)
         except NotImplementedError:
             st.info("Feature coming soon!")

@@ -1,7 +1,8 @@
 from dataclasses import dataclass, field
 import io
-import streamlit as st
-import requests
+from typing import Any, Dict, Optional
+from config import api_key
+import aiohttp
 
 @dataclass(frozen=True)
 class Track:
@@ -33,40 +34,58 @@ class ShazamAPI:
     def __init__(self):
         self.url = "https://shazam-song-recognition-api.p.rapidapi.com/recognize/file"
         self.headers = {
-            'x-rapidapi-key': st.secrets["api_key"],
+            'x-rapidapi-key': api_key,
             'x-rapidapi-host': "shazam-song-recognition-api.p.rapidapi.com",
             'Content-Type': "application/octet-stream"
         }
+        self.session = None
+    
+    async def __aenter__(self):
+        self.session = aiohttp.ClientSession()
+        return self
 
-    def get_track_from_chunk(self, chunk: io.BytesIO):
-        response = requests.post(
-            url=self.url,
-            headers=self.headers,
-            data=chunk
-        )
-        return self._scan_track(response.json())
+    async def __aexit__(self, exc_type, exc, tb):
+        await self.session.close()
 
-    def _scan_track(self, resp):
-        track_data = resp.get('track', {})
-        if track_data:
-            track_id = track_data.get('key', 'Unknown')
-            track_name = track_data.get('title', 'Unknown Title')
-            artist_name = track_data.get('subtitle', 'Unknown Artist')
-            track_genre = track_data.get("genres", {}).get("primary", "Unknown Genre")
-            spotify_link = None
-            for provider in track_data.get("hub", {}).get("providers", []):
-                if provider.get("type") == "SPOTIFY":
-                    spotify_link = provider.get("actions", [{}])[0].get("uri", "No Spotify Link")
-                    break
-            cover_art = track_data.get("images", {}).get("coverart", "No Cover Art")
-            return Track(
-                track_id=track_id,
-                title=track_name,
-                artist=artist_name,
-                spotify_link=spotify_link,
-                genre=track_genre,
-                cover_art=cover_art
-            )
+    async def get_track_from_chunk(self, chunk: io.BytesIO) -> Optional[Track]:
+        try:
+            async with self.session.post(url=self.url, headers=self.headers, data=chunk) as response:
+                response.raise_for_status()
+                resp_json = await response.json()
+                return self._scan_track(resp_json)
+        except aiohttp.ClientError as e:
+            print(f"HTTP error: {e}")
+        except Exception as e:
+            print(f"Unexpected error: {e}")
         return None
 
- 
+    def _scan_track(self, resp: Dict[str, Any]) -> Optional[Track]:
+        track_data = resp.get('track', {})
+        if not track_data:
+            return None
+
+        track_id = track_data.get('key', 'Unknown')
+        track_name = track_data.get('title', 'Unknown Title')
+        artist_name = track_data.get('subtitle', 'Unknown Artist')
+        track_genre = track_data.get("genres", {}).get("primary", "Unknown Genre")
+
+        spotify_link = None
+        for provider in track_data.get("hub", {}).get("providers", []):
+            if provider.get("type") == "SPOTIFY":
+                spotify_link = provider.get("actions", [{}])[0].get("uri", "No Spotify Link")
+                break
+
+        cover_art = track_data.get("images", {}).get("coverart", "No Cover Art")
+
+        return Track(
+            track_id=track_id,
+            title=track_name,
+            artist=artist_name,
+            spotify_link=spotify_link,
+            genre=track_genre,
+            cover_art=cover_art
+        )
+
+    async def close(self):
+        if self.session:
+            await self.session.close()

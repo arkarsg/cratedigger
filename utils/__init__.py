@@ -1,12 +1,12 @@
-from models import (
+from .models import (
     Track,
     MixTrack,
     ShazamAPI,
 )
-from storage import (
+from .storage import (
     TrackStorage
 )
-from audio_processing import (
+from .audio_processing import (
     process
 )
 
