@@ -47,9 +47,7 @@ class TrackStorage:
         with self._lock:
             # Convert dictionary to list of tuples (track_id, MixTrack)
             tracks_list = list(self._tracks.items())
-            # Sort the list by start_offset
-            sorted_tracks = sorted(tracks_list, key=lambda item: item[1].start_offset)
-            return sorted_tracks
+            return tracks_list 
 
 
 class ShazamAPI:
