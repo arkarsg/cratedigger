@@ -15,5 +15,5 @@ __all__ = [
     "MixTrack",
     "ShazamAPI",
     "TrackStorage",
-    "process"
+    "process",
 ]
