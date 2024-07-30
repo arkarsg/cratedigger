@@ -3,6 +3,7 @@ import io
 from typing import Any, Dict, Optional
 from config import api_key
 import aiohttp
+import streamlit as st
 
 @dataclass(frozen=True)
 class Track:
@@ -54,9 +55,9 @@ class ShazamAPI:
                 resp_json = await response.json()
                 return self._scan_track(resp_json)
         except aiohttp.ClientError as e:
-            print(f"HTTP error: {e}")
+            st.error(f"HTTP error: {e}")
         except Exception as e:
-            print(f"Unexpected error: {e}")
+            st.error(f"Unexpected error: {e}")
         return None
 
     def _scan_track(self, resp: Dict[str, Any]) -> Optional[Track]:

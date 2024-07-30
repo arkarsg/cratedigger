@@ -1,17 +1,18 @@
 import streamlit as st
 
 def intro():
-    st.write("# TraxFish 🐡🔥")
+    st.write("# CrateDigger 💿📦")
 
     st.markdown(
         """
         Stop commenting "ID?" on your favourite SoundClound and Youtube mixes
-        ### Key features
-        - File upload
-        - Link to DJ mix
+
+        ### How it works
+        Simply upload a mix you have in `mp3` only *or* paste a link to a mix.
+        We recommend `YouTube` and `SoundCloud` links. Other providers are not tested yet.
         
-        # Get started
-        1. Upload your mix **or** insert a link to your mix
-        2. Click "Find
+        CrateDigger then analyses and tries to find Track IDs for the *entire* mix 😎  
+
+        ---
     """
     )
