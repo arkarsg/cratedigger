@@ -10,8 +10,10 @@ async def run():
     if submitted:
         data = trax.get_form_data()
         try:
-            querier.validate_data(data)
-            result = await querier.query_tracks(data)
+            with st.status("Digging for tracks...", expanded=True) as s:
+                querier.validate_data(data)
+                result = await querier.query_tracks(data)
+                s.update(label="Done", expanded=False, state='complete')
             track_list.show(result)
         except InvalidUrlException as i:
             st.error(i.message)

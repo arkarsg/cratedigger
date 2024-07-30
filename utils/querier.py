@@ -28,9 +28,8 @@ async def file_handler(file, scan_freq):
 async def link_handler(link, scan_freq):
     ydl = AudioDownloader()
     file = ydl.dowload(link)
-    st.toast("File downloaded")
+    st.write("File downloaded")
     tracks = await process(BytesIO(file), chunk_length_ms=scan_freq * 1000)
-    st.toast("Done")
     return df_adapter(tracks)
 
 # list of (track_id, MixTrack) sorted by start time
