@@ -20,31 +20,31 @@ def format_tracks(tracks):
 
 def show_table(df):
     st.dataframe(
-    df,
-    column_config={
-        "track_id": None,
-        "title": st.column_config.TextColumn(
-            "Track",
-            help="Name of the track"
-        ),
-        "artist": st.column_config.TextColumn(
-            "Artist",
-            help="Artist of the track"
-        ),
-        "genre": st.column_config.TextColumn(
-            "Genre",
-            help="Genre of the track"
-        ),
-        "spotify_link": st.column_config.LinkColumn(
-            "Spotify link",
-            display_text="Link"
-        ),
-        "cover_art": st.column_config.ImageColumn(
-            "Cover Art (preview)"
-        )
-    },
-    hide_index=True,
-)
+        df,
+        column_config={
+            "track_id": None,
+            "title": st.column_config.TextColumn(
+                "Track",
+                help="Name of the track"
+            ),
+            "artist": st.column_config.TextColumn(
+                "Artist",
+                help="Artist of the track"
+            ),
+            "genre": st.column_config.TextColumn(
+                "Genre",
+                help="Genre of the track"
+            ),
+            "spotify_link": st.column_config.LinkColumn(
+                "Spotify link",
+                display_text="Link"
+            ),
+            "cover_art": st.column_config.ImageColumn(
+                "Cover Art (preview)"
+            )
+        },
+        hide_index=True,
+    )
 
 def flatten_track(track):
     track_dict =  {

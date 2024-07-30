@@ -1,9 +1,8 @@
 import io
 import random
-import requests
 from pydub import AudioSegment
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from .models import Track, ShazamAPI, TrackStorage 
+from .models import ShazamAPI, TrackStorage 
 import streamlit as st
      
 api = ShazamAPI()

@@ -1,8 +1,7 @@
-from . import audio_processing as ad
 from tracks_exceptions import InvalidUrlException, NoSourceException, TooManySourceException
-import streamlit as st
 from io import BytesIO
 from urllib.parse import urlparse
+from . import process
 
 
 def validate_data(tracks_request):
@@ -19,7 +18,7 @@ def valid_url(url):
         return False
 
 def file_handler(file, scan_freq):
-    tracks = ad.process(file, chunk_length_ms=scan_freq * 1000)
+    tracks = process(file, chunk_length_ms=scan_freq * 1000)
     return df_adapter(tracks)
 
 # list of (track_id, MixTrack) sorted by start time
