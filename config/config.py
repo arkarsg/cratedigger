@@ -1,1 +1,1 @@
-MAX_DURATION = 1 * 60 * 60 + 5 * 60
+MAX_DURATION = 1 * 60 * 60 + 15 * 60
