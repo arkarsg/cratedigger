@@ -50,13 +50,14 @@ class ShazamAPI:
 
     async def ping(self):
         async with self.session.post(url=self.url, headers=self.headers) as response:
-            rate_limit_remainder = response.headers['X-RateLimit-Requests-Remaining']
-            free_plan_remainder = response.headers['X-RateLimit-rapid-free-plans-hard-limit-Remaining']
-            return int(rate_limit_remainder), int(free_plan_remainder) 
+            return self._check_limit(response)
             
     async def get_track_from_chunk(self, chunk: io.BytesIO) -> Optional[Track]:
         try:
             async with self.session.post(url=self.url, headers=self.headers, data=chunk) as response:
+                limit = self._check_limit(response)
+                if limit:
+                    st.rerun()
                 response.raise_for_status()
                 resp_json = await response.json()
                 return self._scan_track(resp_json)
@@ -71,6 +72,15 @@ class ShazamAPI:
             st.error("Something went wrong...")
         return None
 
+    def _check_limit(response):
+        rate_limit_remainder = response.headers['X-RateLimit-Requests-Remaining']
+        free_plan_remainder = response.headers['X-RateLimit-rapid-free-plans-hard-limit-Remaining']
+        if rate_limit_remainder == 0:
+            return "hourly"
+        if free_plan_remainder == 0:
+            return "monthly"
+        return None  
+        
     def _scan_track(self, resp: Dict[str, Any]) -> Optional[Track]:
         track_data = resp.get('track', {})
         if not track_data:
