@@ -51,7 +51,6 @@ class ShazamAPI:
     async def get_track_from_chunk(self, chunk: io.BytesIO) -> Optional[Track]:
         try:
             async with self.session.post(url=self.url, headers=self.headers, data=chunk) as response:
-                print("Query")
                 response.raise_for_status()
                 resp_json = await response.json()
                 print(resp_json)

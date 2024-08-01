@@ -2628,14 +2628,94 @@ Prism.languages.py = Prism.languages.python;
     </script>
     <script>
       const profile = {
-    "alloc_samples": 25,
+    "alloc_samples": 300,
     "args": [
-        "/Users/arkar/Desktop/NUS/Projects/trackfish/utils/audio_file_processor.py"
+        "mem_profile_test.py"
     ],
-    "elapsed_time_sec": 16.261962890625,
-    "entrypoint_dir": "/Users/arkar/Desktop/NUS/Projects/trackfish/utils",
-    "filename": "/Users/arkar/Desktop/NUS/Projects/trackfish/utils",
+    "elapsed_time_sec": 59.93515610694885,
+    "entrypoint_dir": "/Users/arkar/Desktop/NUS/Projects/trackfish",
+    "filename": "/Users/arkar/Desktop/NUS/Projects/trackfish",
     "files": {
+        "/Users/arkar/Desktop/NUS/Projects/trackfish/config/config.py": {
+            "functions": [],
+            "imports": [],
+            "leaks": {},
+            "lines": [
+                {
+                    "end_outermost_loop": 1,
+                    "end_region_line": 1,
+                    "line": "import streamlit as st\n",
+                    "lineno": 1,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 2.6559360353279446,
+                    "n_core_utilization": 0.26178637947445477,
+                    "n_cpu_percent_c": 1.7097688642328877,
+                    "n_cpu_percent_python": 0.10315575794936967,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0.0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.2738989031365001,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 1,
+                    "start_region_line": 1
+                },
+                {
+                    "end_outermost_loop": 2,
+                    "end_region_line": 2,
+                    "line": "\n",
+                    "lineno": 2,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 2,
+                    "start_region_line": 2
+                },
+                {
+                    "end_outermost_loop": 3,
+                    "end_region_line": 3,
+                    "line": "api_key = st.secrets[\"api_key\"]",
+                    "lineno": 3,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0838782032289327,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.01327967071932118,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0.0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.006510438939853852,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 3,
+                    "start_region_line": 3
+                }
+            ],
+            "percent_cpu_time": 2.1066136349779327
+        },
         "/Users/arkar/Desktop/NUS/Projects/trackfish/utils/audio_downloader.py": {
             "functions": [
                 {
@@ -2643,61 +2723,57 @@ Prism.languages.py = Prism.languages.python;
                     "lineno": 21,
                     "memory_samples": [
                         [
-                            536841333,
-                            20.75311851501465
+                            688213584,
+                            30.282794952392578
                         ],
                         [
-                            2273449000,
-                            30.915098190307617
+                            2237427334,
+                            41.01478290557861
                         ],
                         [
-                            3295356708,
-                            43.21261405944824
+                            2877308417,
+                            52.556220054626465
                         ],
                         [
-                            4223507750,
-                            57.22807216644287
+                            4035916500,
+                            66.58007335662842
                         ],
                         [
-                            4687767500,
-                            69.13458919525146
+                            5100649667,
+                            78.6029462814331
                         ],
                         [
-                            5575528750,
-                            70.840407371521
+                            5745168875,
+                            91.60877799987793
                         ],
                         [
-                            6394555291,
-                            82.85417175292969
+                            7027639042,
+                            104.64057922363281
                         ],
                         [
-                            6735606125,
-                            83.86741733551025
+                            8294840959,
+                            117.54303073883057
                         ],
                         [
-                            7667811750,
-                            96.87382698059082
-                        ],
-                        [
-                            8750334083,
-                            108.88851737976074
+                            8314864209,
+                            106.60171794891357
                         ]
                     ],
-                    "n_avg_mb": 108.98276042938232,
-                    "n_copy_mb_s": 36.12877072261256,
-                    "n_core_utilization": 0.008813546509279081,
-                    "n_cpu_percent_c": 0.08303397131802155,
-                    "n_cpu_percent_python": 3.454134815117532,
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 7.173514798034014,
+                    "n_core_utilization": 0.010345148368353638,
+                    "n_cpu_percent_c": 0.03235038041276529,
+                    "n_cpu_percent_python": 0.9941767498771348,
                     "n_gpu_avg_memory_mb": 0.0,
                     "n_gpu_peak_memory_mb": 0.0,
                     "n_gpu_percent": 0.0,
-                    "n_growth_mb": 108.98276042938232,
-                    "n_malloc_mb": 120.14578247070312,
-                    "n_mallocs": 1,
-                    "n_peak_mb": 108.98276042938232,
-                    "n_python_fraction": 0.812003512991429,
-                    "n_sys_percent": 46.62948068196446,
-                    "n_usage_fraction": 0.9230773131018606
+                    "n_growth_mb": 86.60053443908691,
+                    "n_malloc_mb": 96.6005802154541,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 86.60053443908691,
+                    "n_python_fraction": 0.8030684766306672,
+                    "n_sys_percent": 11.376957741784308,
+                    "n_usage_fraction": 0.02723823509670005
                 }
             ],
             "imports": [
@@ -2737,25 +2813,25 @@ Prism.languages.py = Prism.languages.python;
                     "lineno": 2,
                     "memory_samples": [
                         [
-                            349154458,
-                            10.012093544006348
+                            531488875,
+                            20.18850612640381
                         ]
                     ],
                     "n_avg_mb": 0.0,
-                    "n_copy_mb_s": 18.52322866701572,
-                    "n_core_utilization": 0.18005039137388762,
-                    "n_cpu_percent_c": 7.155163088716203,
-                    "n_cpu_percent_python": 0.8235041761407651,
+                    "n_copy_mb_s": 4.939119120131722,
+                    "n_core_utilization": 0.09767269238912514,
+                    "n_cpu_percent_c": 0.21983864392944577,
+                    "n_cpu_percent_python": 0.20102714248111633,
                     "n_gpu_avg_memory_mb": 0.0,
                     "n_gpu_peak_memory_mb": 0.0,
                     "n_gpu_percent": 0.0,
-                    "n_growth_mb": 10.012093544006348,
-                    "n_malloc_mb": 10.012093544006348,
+                    "n_growth_mb": 10.000008583068848,
+                    "n_malloc_mb": 10.000008583068848,
                     "n_mallocs": 0,
-                    "n_peak_mb": 10.012093544006348,
-                    "n_python_fraction": 0.9874299999999999,
-                    "n_sys_percent": 1.4467820702651508,
-                    "n_usage_fraction": 0.07692268689813943,
+                    "n_peak_mb": 10.000008583068848,
+                    "n_python_fraction": 0.985857,
+                    "n_sys_percent": 0.11775173312837563,
+                    "n_usage_fraction": 0.002819678558318556,
                     "start_outermost_loop": 2,
                     "start_region_line": 2
                 },
@@ -3246,25 +3322,25 @@ Prism.languages.py = Prism.languages.python;
                     "lineno": 23,
                     "memory_samples": [
                         [
-                            536841333,
-                            20.75311851501465
+                            688213584,
+                            30.282794952392578
                         ]
                     ],
                     "n_avg_mb": 0.0,
-                    "n_copy_mb_s": 12.636871870730682,
-                    "n_core_utilization": 0.11678979027324428,
-                    "n_cpu_percent_c": 0.16993820842157703,
-                    "n_cpu_percent_python": 0.32461930930578103,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.11651302101691301,
+                    "n_cpu_percent_c": 0.03527697893412125,
+                    "n_cpu_percent_python": 0.09223221850585894,
                     "n_gpu_avg_memory_mb": 0.0,
                     "n_gpu_peak_memory_mb": 0.0,
                     "n_gpu_percent": 0.0,
-                    "n_growth_mb": 10.552538871765137,
-                    "n_malloc_mb": 10.552538871765137,
+                    "n_growth_mb": 10.000045776367188,
+                    "n_malloc_mb": 10.000045776367188,
                     "n_mallocs": 0,
-                    "n_peak_mb": 10.552538871765137,
-                    "n_python_fraction": 0.998657,
-                    "n_sys_percent": 0.034766916979519,
-                    "n_usage_fraction": 0.08107491605481153,
+                    "n_peak_mb": 10.000045776367188,
+                    "n_python_fraction": 0.998003,
+                    "n_sys_percent": 0.009287956568101642,
+                    "n_usage_fraction": 0.002819689045624139,
                     "start_outermost_loop": 23,
                     "start_region_line": 21
                 },
@@ -3275,57 +3351,49 @@ Prism.languages.py = Prism.languages.python;
                     "lineno": 24,
                     "memory_samples": [
                         [
-                            2273449000,
-                            30.915098190307617
+                            2237427334,
+                            41.01478290557861
                         ],
                         [
-                            3295356708,
-                            43.21261405944824
+                            2877308417,
+                            52.556220054626465
                         ],
                         [
-                            4223507750,
-                            57.22807216644287
+                            4035916500,
+                            66.58007335662842
                         ],
                         [
-                            4687767500,
-                            69.13458919525146
+                            5100649667,
+                            78.6029462814331
                         ],
                         [
-                            5575528750,
-                            70.840407371521
+                            5745168875,
+                            91.60877799987793
                         ],
                         [
-                            6394555291,
-                            82.85417175292969
+                            7027639042,
+                            104.64057922363281
                         ],
                         [
-                            6735606125,
-                            83.86741733551025
-                        ],
-                        [
-                            7667811750,
-                            96.87382698059082
-                        ],
-                        [
-                            8750334083,
-                            108.88851737976074
+                            8294840959,
+                            117.54303073883057
                         ]
                     ],
-                    "n_avg_mb": 108.98276042938232,
-                    "n_copy_mb_s": 23.491898851881878,
-                    "n_core_utilization": 0.008042287625250758,
-                    "n_cpu_percent_c": 0.06406565314040435,
-                    "n_cpu_percent_python": 3.129515505811755,
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 7.173514798034014,
+                    "n_core_utilization": 0.009463355406156301,
+                    "n_cpu_percent_c": 0.026727672887860276,
+                    "n_cpu_percent_python": 0.901944531371277,
                     "n_gpu_avg_memory_mb": 0.0,
                     "n_gpu_peak_memory_mb": 0.0,
                     "n_gpu_percent": 0.0,
-                    "n_growth_mb": 108.98276042938232,
-                    "n_malloc_mb": 109.59324359893799,
-                    "n_mallocs": 1,
-                    "n_peak_mb": 108.98276042938232,
-                    "n_python_fraction": 0.7940309800822238,
-                    "n_sys_percent": 46.443743874740974,
-                    "n_usage_fraction": 0.842002397047049,
+                    "n_growth_mb": 86.60053443908691,
+                    "n_malloc_mb": 86.60053443908691,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 86.60053443908691,
+                    "n_python_fraction": 0.7805587523002846,
+                    "n_sys_percent": 11.338015513806988,
+                    "n_usage_fraction": 0.024418546051075914,
                     "start_outermost_loop": 24,
                     "start_region_line": 21
                 },
@@ -3334,7 +3402,12 @@ Prism.languages.py = Prism.languages.python;
                     "end_region_line": 25,
                     "line": "        return buffer.getvalue()",
                     "lineno": 25,
-                    "memory_samples": [],
+                    "memory_samples": [
+                        [
+                            8314864209,
+                            106.60171794891357
+                        ]
+                    ],
                     "n_avg_mb": 0.0,
                     "n_copy_mb_s": 0.0,
                     "n_core_utilization": 0.0,
@@ -3354,19 +3427,19 @@ Prism.languages.py = Prism.languages.python;
                     "start_region_line": 21
                 }
             ],
-            "percent_cpu_time": 59.59209880352191
+            "percent_cpu_time": 12.942102391613126
         },
         "/Users/arkar/Desktop/NUS/Projects/trackfish/utils/audio_file_processor.py": {
             "functions": [
                 {
-                    "line": "AudioFileProcessor.__init__",
-                    "lineno": 13,
+                    "line": "AudioFileProcessor.process",
+                    "lineno": 19,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
                     "n_copy_mb_s": 0.0,
-                    "n_core_utilization": 0.055468767531543985,
-                    "n_cpu_percent_c": 0.0,
-                    "n_cpu_percent_python": 0.030835286135894095,
+                    "n_core_utilization": 0.10063709325441043,
+                    "n_cpu_percent_c": 0.15604256072156672,
+                    "n_cpu_percent_python": 0.07966476445141625,
                     "n_gpu_avg_memory_mb": 0.0,
                     "n_gpu_peak_memory_mb": 0.0,
                     "n_gpu_percent": 0.0,
@@ -3375,38 +3448,444 @@ Prism.languages.py = Prism.languages.python;
                     "n_mallocs": 0,
                     "n_peak_mb": 0.0,
                     "n_python_fraction": 0,
-                    "n_sys_percent": 0.03865266065857606,
+                    "n_sys_percent": 0.05706162009195426,
                     "n_usage_fraction": 0.0
                 },
                 {
-                    "line": "AudioFileProcessor._worker",
-                    "lineno": 31,
-                    "memory_samples": [],
-                    "n_avg_mb": 0.0,
-                    "n_copy_mb_s": 0.0,
-                    "n_core_utilization": 0.0016240180970864442,
-                    "n_cpu_percent_c": 0.004973962633355765,
-                    "n_cpu_percent_python": 0.5182057449035617,
+                    "line": "AudioFileProcessor._get_mp3_buffer_from_chunk",
+                    "lineno": 46,
+                    "memory_samples": [
+                        [
+                            10467770625,
+                            116.60375118255615
+                        ],
+                        [
+                            10517072250,
+                            126.69920921325684
+                        ],
+                        [
+                            10566992209,
+                            136.79441165924072
+                        ],
+                        [
+                            10616814834,
+                            146.88884449005127
+                        ],
+                        [
+                            10666914875,
+                            156.98336029052734
+                        ],
+                        [
+                            10719032417,
+                            167.07983493804932
+                        ],
+                        [
+                            10769668167,
+                            177.17808151245117
+                        ],
+                        [
+                            10819923459,
+                            187.27816677093506
+                        ],
+                        [
+                            10869596709,
+                            197.3755121231079
+                        ],
+                        [
+                            10919615834,
+                            207.4701805114746
+                        ],
+                        [
+                            10956953167,
+                            312.0382719039917
+                        ],
+                        [
+                            10956958584,
+                            411.63401222229004
+                        ],
+                        [
+                            10984199709,
+                            299.97470474243164
+                        ],
+                        [
+                            10984203209,
+                            400.911883354187
+                        ],
+                        [
+                            10985434875,
+                            299.88077449798584
+                        ],
+                        [
+                            10992156417,
+                            400.9132966995239
+                        ],
+                        [
+                            15640577250,
+                            419.2613868713379
+                        ],
+                        [
+                            18536471584,
+                            429.35883140563965
+                        ],
+                        [
+                            18586818500,
+                            439.4573059082031
+                        ],
+                        [
+                            18637337334,
+                            449.5555944442749
+                        ],
+                        [
+                            18687520709,
+                            459.6539945602417
+                        ],
+                        [
+                            18788069250,
+                            479.85882472991943
+                        ],
+                        [
+                            18838420042,
+                            489.9557113647461
+                        ],
+                        [
+                            18888353667,
+                            500.0503349304199
+                        ],
+                        [
+                            18938139834,
+                            510.1455554962158
+                        ],
+                        [
+                            18977305834,
+                            613.6443576812744
+                        ],
+                        [
+                            18977310750,
+                            713.2031736373901
+                        ],
+                        [
+                            19011115875,
+                            510.592734336853
+                        ],
+                        [
+                            19024441542,
+                            299.56104278564453
+                        ],
+                        [
+                            19024443875,
+                            400.4989709854126
+                        ],
+                        [
+                            23741551167,
+                            418.93684673309326
+                        ],
+                        [
+                            27088617417,
+                            429.0355215072632
+                        ],
+                        [
+                            27139157875,
+                            439.13029956817627
+                        ],
+                        [
+                            27189995125,
+                            449.2287549972534
+                        ],
+                        [
+                            27240443625,
+                            459.32320976257324
+                        ],
+                        [
+                            27291070250,
+                            469.41989517211914
+                        ],
+                        [
+                            27341238584,
+                            479.5158996582031
+                        ],
+                        [
+                            27391345750,
+                            489.62176418304443
+                        ],
+                        [
+                            27441516834,
+                            499.7197389602661
+                        ],
+                        [
+                            27491744875,
+                            509.8162450790405
+                        ],
+                        [
+                            27541882834,
+                            613.6416501998901
+                        ],
+                        [
+                            27541887542,
+                            713.1845741271973
+                        ],
+                        [
+                            27590176250,
+                            510.63603496551514
+                        ],
+                        [
+                            27590180125,
+                            299.5082845687866
+                        ],
+                        [
+                            27590182000,
+                            400.44622802734375
+                        ],
+                        [
+                            32478222334,
+                            418.9782180786133
+                        ],
+                        [
+                            33876560292,
+                            226.5068359375
+                        ],
+                        [
+                            33926610959,
+                            236.6024045944214
+                        ],
+                        [
+                            33976974417,
+                            246.70264434814453
+                        ],
+                        [
+                            34027762292,
+                            256.8023986816406
+                        ],
+                        [
+                            34078141084,
+                            266.8988256454468
+                        ],
+                        [
+                            34128111375,
+                            276.9946537017822
+                        ],
+                        [
+                            34177902125,
+                            287.092848777771
+                        ],
+                        [
+                            34227966084,
+                            297.19825744628906
+                        ],
+                        [
+                            34279850084,
+                            307.29260444641113
+                        ],
+                        [
+                            34330197167,
+                            411.15535163879395
+                        ],
+                        [
+                            34330202042,
+                            510.6759967803955
+                        ],
+                        [
+                            34350060500,
+                            510.6719083786011
+                        ],
+                        [
+                            34364198625,
+                            299.63039112091064
+                        ],
+                        [
+                            34364201125,
+                            400.5682888031006
+                        ],
+                        [
+                            39111386667,
+                            419.0056686401367
+                        ],
+                        [
+                            40071087750,
+                            429.1038188934326
+                        ],
+                        [
+                            40121409042,
+                            439.2013692855835
+                        ],
+                        [
+                            40171711625,
+                            449.2979335784912
+                        ],
+                        [
+                            40222001250,
+                            459.39466094970703
+                        ],
+                        [
+                            40321495000,
+                            479.58735752105713
+                        ],
+                        [
+                            40375800709,
+                            489.6890983581543
+                        ],
+                        [
+                            40428274334,
+                            499.78446674346924
+                        ],
+                        [
+                            40479811625,
+                            509.8800210952759
+                        ],
+                        [
+                            40533022917,
+                            613.6756811141968
+                        ],
+                        [
+                            40587219125,
+                            510.64727115631104
+                        ],
+                        [
+                            40587221709,
+                            409.6160936355591
+                        ],
+                        [
+                            40587223667,
+                            510.55396842956543
+                        ],
+                        [
+                            45393303667,
+                            418.98888874053955
+                        ],
+                        [
+                            47790951709,
+                            429.0920524597168
+                        ],
+                        [
+                            47841101334,
+                            439.1870985031128
+                        ],
+                        [
+                            47891185000,
+                            449.28345680236816
+                        ],
+                        [
+                            47941310459,
+                            459.38704204559326
+                        ],
+                        [
+                            47991752292,
+                            469.48463344573975
+                        ],
+                        [
+                            48042708417,
+                            479.5813522338867
+                        ],
+                        [
+                            48143584334,
+                            499.77601146698
+                        ],
+                        [
+                            48193743959,
+                            509.8751621246338
+                        ],
+                        [
+                            48244729500,
+                            613.735912322998
+                        ],
+                        [
+                            48244734834,
+                            713.2460527420044
+                        ],
+                        [
+                            48257543667,
+                            612.3093776702881
+                        ],
+                        [
+                            48257545959,
+                            713.2463274002075
+                        ],
+                        [
+                            48278979792,
+                            308.8208122253418
+                        ],
+                        [
+                            48278982250,
+                            409.7586717605591
+                        ],
+                        [
+                            52956644334,
+                            428.19727325439453
+                        ],
+                        [
+                            56827898334,
+                            438.29286670684814
+                        ],
+                        [
+                            56880421959,
+                            448.3909025192261
+                        ],
+                        [
+                            56934005709,
+                            458.4880208969116
+                        ],
+                        [
+                            56986345084,
+                            468.58344173431396
+                        ],
+                        [
+                            57054460375,
+                            533.0442228317261
+                        ],
+                        [
+                            57054465667,
+                            588.6047277450562
+                        ],
+                        [
+                            57084488625,
+                            332.34535026550293
+                        ],
+                        [
+                            57094288459,
+                            210.34710597991943
+                        ],
+                        [
+                            57094291417,
+                            266.76728439331055
+                        ],
+                        [
+                            57099187125,
+                            323.18707370758057
+                        ],
+                        [
+                            59905882584,
+                            333.57795810699463
+                        ]
+                    ],
+                    "n_avg_mb": 119.70244789123535,
+                    "n_copy_mb_s": 51.184363155242394,
+                    "n_core_utilization": 0.007339004952725746,
+                    "n_cpu_percent_c": 0.12789530249242712,
+                    "n_cpu_percent_python": 4.832415724403851,
                     "n_gpu_avg_memory_mb": 0.0,
                     "n_gpu_peak_memory_mb": 0.0,
                     "n_gpu_percent": 0.0,
-                    "n_growth_mb": 0.0,
-                    "n_malloc_mb": 0.0,
-                    "n_mallocs": 0,
-                    "n_peak_mb": 0.0,
-                    "n_python_fraction": 0,
-                    "n_sys_percent": 39.74574559535253,
-                    "n_usage_fraction": 0.0
+                    "n_growth_mb": 713.4345388412476,
+                    "n_malloc_mb": 3429.905987739563,
+                    "n_mallocs": 1,
+                    "n_peak_mb": 713.4345388412476,
+                    "n_python_fraction": 0.9999866066424976,
+                    "n_sys_percent": 79.52510387008496,
+                    "n_usage_fraction": 0.967122406979947
                 }
             ],
             "imports": [
                 "import io",
                 "import math",
-                "import time",
-                "import numpy as np",
-                "import soundfile as sf"
+                "from . import ShazamAPI, TrackStorage",
+                "import soundfile as sf",
+                "import gc"
             ],
-            "leaks": {},
+            "leaks": {
+                "48": {
+                    "likelihood": 0.96,
+                    "velocity_mb_s": 0.0
+                }
+            },
             "lines": [
                 {
                     "end_outermost_loop": 1,
@@ -3483,7 +3962,7 @@ Prism.languages.py = Prism.languages.python;
                 {
                     "end_outermost_loop": 4,
                     "end_region_line": 4,
-                    "line": "import time\n",
+                    "line": "from pydub import AudioSegment \n",
                     "lineno": 4,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3507,7 +3986,7 @@ Prism.languages.py = Prism.languages.python;
                 {
                     "end_outermost_loop": 5,
                     "end_region_line": 5,
-                    "line": "from pydub import AudioSegment\n",
+                    "line": "from . import ShazamAPI, TrackStorage\n",
                     "lineno": 5,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3531,7 +4010,7 @@ Prism.languages.py = Prism.languages.python;
                 {
                     "end_outermost_loop": 6,
                     "end_region_line": 6,
-                    "line": "import numpy as np\n",
+                    "line": "import streamlit as st\n",
                     "lineno": 6,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3555,7 +4034,7 @@ Prism.languages.py = Prism.languages.python;
                 {
                     "end_outermost_loop": 7,
                     "end_region_line": 7,
-                    "line": "#from . import ShazamAPI, TrackStorage\n",
+                    "line": "import soundfile as sf\n",
                     "lineno": 7,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3579,7 +4058,7 @@ Prism.languages.py = Prism.languages.python;
                 {
                     "end_outermost_loop": 8,
                     "end_region_line": 8,
-                    "line": "# import streamlit as st\n",
+                    "line": "import gc\n",
                     "lineno": 8,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3603,7 +4082,1835 @@ Prism.languages.py = Prism.languages.python;
                 {
                     "end_outermost_loop": 9,
                     "end_region_line": 9,
-                    "line": "import soundfile as sf\n",
+                    "line": "\n",
+                    "lineno": 9,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 9,
+                    "start_region_line": 9
+                },
+                {
+                    "end_outermost_loop": 58,
+                    "end_region_line": 58,
+                    "line": "class AudioFileProcessor:\n",
+                    "lineno": 10,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 10,
+                    "start_region_line": 10
+                },
+                {
+                    "end_outermost_loop": 17,
+                    "end_region_line": 17,
+                    "line": "    def __init__(self, file: io.BytesIO, chunk_length_in_seconds: int) -\\u003e None:\n",
+                    "lineno": 11,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 11,
+                    "start_region_line": 11
+                },
+                {
+                    "end_outermost_loop": 12,
+                    "end_region_line": 17,
+                    "line": "        self.file = file \n",
+                    "lineno": 12,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 12,
+                    "start_region_line": 11
+                },
+                {
+                    "end_outermost_loop": 13,
+                    "end_region_line": 17,
+                    "line": "        self.audio_file = sf.SoundFile(self.file)\n",
+                    "lineno": 13,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 13,
+                    "start_region_line": 11
+                },
+                {
+                    "end_outermost_loop": 14,
+                    "end_region_line": 17,
+                    "line": "        self.chunk_length = chunk_length_in_seconds\n",
+                    "lineno": 14,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 14,
+                    "start_region_line": 11
+                },
+                {
+                    "end_outermost_loop": 15,
+                    "end_region_line": 17,
+                    "line": "        self.audio_length_seconds = self.audio_file.frames / self.audio_file.samplerate\n",
+                    "lineno": 15,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 15,
+                    "start_region_line": 11
+                },
+                {
+                    "end_outermost_loop": 16,
+                    "end_region_line": 17,
+                    "line": "        self.api = ShazamAPI()\n",
+                    "lineno": 16,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 16,
+                    "start_region_line": 11
+                },
+                {
+                    "end_outermost_loop": 17,
+                    "end_region_line": 17,
+                    "line": "        self.track_storage = TrackStorage()\n",
+                    "lineno": 17,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 17,
+                    "start_region_line": 11
+                },
+                {
+                    "end_outermost_loop": 18,
+                    "end_region_line": 58,
+                    "line": "        \n",
+                    "lineno": 18,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 18,
+                    "start_region_line": 10
+                },
+                {
+                    "end_outermost_loop": 35,
+                    "end_region_line": 58,
+                    "line": "    async def process(self):\n",
+                    "lineno": 19,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 19,
+                    "start_region_line": 10
+                },
+                {
+                    "end_outermost_loop": 20,
+                    "end_region_line": 58,
+                    "line": "        n = self.audio_length_seconds // self.chunk_length\n",
+                    "lineno": 20,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 20,
+                    "start_region_line": 10
+                },
+                {
+                    "end_outermost_loop": 21,
+                    "end_region_line": 58,
+                    "line": "        prog = 0\n",
+                    "lineno": 21,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 21,
+                    "start_region_line": 10
+                },
+                {
+                    "end_outermost_loop": 22,
+                    "end_region_line": 58,
+                    "line": "        prog_delta = 1 // n\n",
+                    "lineno": 22,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 22,
+                    "start_region_line": 10
+                },
+                {
+                    "end_outermost_loop": 23,
+                    "end_region_line": 58,
+                    "line": "        bar = st.progress(prog, text=\"Analysing chunks...\")\n",
+                    "lineno": 23,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.10063709325441043,
+                    "n_cpu_percent_c": 0.15604256072156672,
+                    "n_cpu_percent_python": 0.07966476445141625,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0.0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.05706162009195426,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 23,
+                    "start_region_line": 10
+                },
+                {
+                    "end_outermost_loop": 24,
+                    "end_region_line": 58,
+                    "line": "\n",
+                    "lineno": 24,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 24,
+                    "start_region_line": 10
+                },
+                {
+                    "end_outermost_loop": 25,
+                    "end_region_line": 58,
+                    "line": "        async with self.api:\n",
+                    "lineno": 25,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 25,
+                    "start_region_line": 10
+                },
+                {
+                    "end_outermost_loop": 26,
+                    "end_region_line": 58,
+                    "line": "            tasks = [\n",
+                    "lineno": 26,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 26,
+                    "start_region_line": 10
+                },
+                {
+                    "end_outermost_loop": 27,
+                    "end_region_line": 58,
+                    "line": "                self._worker(start)\n",
+                    "lineno": 27,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 27,
+                    "start_region_line": 10
+                },
+                {
+                    "end_outermost_loop": 28,
+                    "end_region_line": 58,
+                    "line": "                for start in range(0, math.ceil(self.audio_length_seconds), self.chunk_length)\n",
+                    "lineno": 28,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 28,
+                    "start_region_line": 10
+                },
+                {
+                    "end_outermost_loop": 29,
+                    "end_region_line": 58,
+                    "line": "            ]\n",
+                    "lineno": 29,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 29,
+                    "start_region_line": 10
+                },
+                {
+                    "end_outermost_loop": 33,
+                    "end_region_line": 33,
+                    "line": "            for task in asyncio.as_completed(tasks):\n",
+                    "lineno": 30,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 30,
+                    "start_region_line": 30
+                },
+                {
+                    "end_outermost_loop": 33,
+                    "end_region_line": 33,
+                    "line": "                await task\n",
+                    "lineno": 31,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 30,
+                    "start_region_line": 30
+                },
+                {
+                    "end_outermost_loop": 33,
+                    "end_region_line": 33,
+                    "line": "                prog = min(1.0, prog + prog_delta)\n",
+                    "lineno": 32,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 30,
+                    "start_region_line": 30
+                },
+                {
+                    "end_outermost_loop": 33,
+                    "end_region_line": 33,
+                    "line": "                bar.progress(prog, text=\"Analysing chunks...\")\n",
+                    "lineno": 33,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 30,
+                    "start_region_line": 30
+                },
+                {
+                    "end_outermost_loop": 34,
+                    "end_region_line": 58,
+                    "line": "        bar.progress(100, text=\"All chunks read!\")\n",
+                    "lineno": 34,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 34,
+                    "start_region_line": 10
+                },
+                {
+                    "end_outermost_loop": 35,
+                    "end_region_line": 58,
+                    "line": "        return await self.track_storage.get_tracks()\n",
+                    "lineno": 35,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 35,
+                    "start_region_line": 10
+                },
+                {
+                    "end_outermost_loop": 36,
+                    "end_region_line": 58,
+                    "line": "\n",
+                    "lineno": 36,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 36,
+                    "start_region_line": 10
+                },
+                {
+                    "end_outermost_loop": 44,
+                    "end_region_line": 58,
+                    "line": "    async def _worker(self, start_time):\n",
+                    "lineno": 37,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 37,
+                    "start_region_line": 10
+                },
+                {
+                    "end_outermost_loop": 38,
+                    "end_region_line": 58,
+                    "line": "        mp3_chunk = self._get_mp3_buffer_from_chunk(start_time)\n",
+                    "lineno": 38,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 38,
+                    "start_region_line": 10
+                },
+                {
+                    "end_outermost_loop": 39,
+                    "end_region_line": 58,
+                    "line": "        track = await self.api.get_track_from_chunk(mp3_chunk)\n",
+                    "lineno": 39,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 39,
+                    "start_region_line": 10
+                },
+                {
+                    "end_outermost_loop": 44,
+                    "end_region_line": 58,
+                    "line": "        if track:\n",
+                    "lineno": 40,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 40,
+                    "start_region_line": 10
+                },
+                {
+                    "end_outermost_loop": 41,
+                    "end_region_line": 58,
+                    "line": "          await self.track_storage.add_track(\n",
+                    "lineno": 41,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 41,
+                    "start_region_line": 10
+                },
+                {
+                    "end_outermost_loop": 42,
+                    "end_region_line": 58,
+                    "line": "              track=track,\n",
+                    "lineno": 42,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 42,
+                    "start_region_line": 10
+                },
+                {
+                    "end_outermost_loop": 43,
+                    "end_region_line": 58,
+                    "line": "              start_offset=start_time,\n",
+                    "lineno": 43,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 43,
+                    "start_region_line": 10
+                },
+                {
+                    "end_outermost_loop": 44,
+                    "end_region_line": 58,
+                    "line": "              end_offset=start_time + self.chunk_length)\n",
+                    "lineno": 44,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 44,
+                    "start_region_line": 10
+                },
+                {
+                    "end_outermost_loop": 45,
+                    "end_region_line": 58,
+                    "line": "\n",
+                    "lineno": 45,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 45,
+                    "start_region_line": 10
+                },
+                {
+                    "end_outermost_loop": 58,
+                    "end_region_line": 58,
+                    "line": "    def _get_mp3_buffer_from_chunk(self, start_time):\n",
+                    "lineno": 46,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 46,
+                    "start_region_line": 46
+                },
+                {
+                    "end_outermost_loop": 47,
+                    "end_region_line": 58,
+                    "line": "        self.file.seek(0)\n",
+                    "lineno": 47,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 47,
+                    "start_region_line": 46
+                },
+                {
+                    "end_outermost_loop": 48,
+                    "end_region_line": 58,
+                    "line": "        mp3 = AudioSegment.from_file(\n",
+                    "lineno": 48,
+                    "memory_samples": [
+                        [
+                            10467770625,
+                            116.60375118255615
+                        ],
+                        [
+                            10517072250,
+                            126.69920921325684
+                        ],
+                        [
+                            10566992209,
+                            136.79441165924072
+                        ],
+                        [
+                            10616814834,
+                            146.88884449005127
+                        ],
+                        [
+                            10666914875,
+                            156.98336029052734
+                        ],
+                        [
+                            10719032417,
+                            167.07983493804932
+                        ],
+                        [
+                            10769668167,
+                            177.17808151245117
+                        ],
+                        [
+                            10819923459,
+                            187.27816677093506
+                        ],
+                        [
+                            10869596709,
+                            197.3755121231079
+                        ],
+                        [
+                            10919615834,
+                            207.4701805114746
+                        ],
+                        [
+                            10956953167,
+                            312.0382719039917
+                        ],
+                        [
+                            10956958584,
+                            411.63401222229004
+                        ],
+                        [
+                            10984199709,
+                            299.97470474243164
+                        ],
+                        [
+                            10984203209,
+                            400.911883354187
+                        ],
+                        [
+                            10985434875,
+                            299.88077449798584
+                        ],
+                        [
+                            10992156417,
+                            400.9132966995239
+                        ],
+                        [
+                            18536471584,
+                            429.35883140563965
+                        ],
+                        [
+                            18586818500,
+                            439.4573059082031
+                        ],
+                        [
+                            18637337334,
+                            449.5555944442749
+                        ],
+                        [
+                            18687520709,
+                            459.6539945602417
+                        ],
+                        [
+                            18737406875,
+                            469.7581739425659
+                        ],
+                        [
+                            18788069250,
+                            479.85882472991943
+                        ],
+                        [
+                            18838420042,
+                            489.9557113647461
+                        ],
+                        [
+                            18888353667,
+                            500.0503349304199
+                        ],
+                        [
+                            18938139834,
+                            510.1455554962158
+                        ],
+                        [
+                            18977305834,
+                            613.6443576812744
+                        ],
+                        [
+                            18977310750,
+                            713.2031736373901
+                        ],
+                        [
+                            19011115875,
+                            510.592734336853
+                        ],
+                        [
+                            19024441542,
+                            299.56104278564453
+                        ],
+                        [
+                            19024443875,
+                            400.4989709854126
+                        ],
+                        [
+                            27088617417,
+                            429.0355215072632
+                        ],
+                        [
+                            27139157875,
+                            439.13029956817627
+                        ],
+                        [
+                            27189995125,
+                            449.2287549972534
+                        ],
+                        [
+                            27240443625,
+                            459.32320976257324
+                        ],
+                        [
+                            27291070250,
+                            469.41989517211914
+                        ],
+                        [
+                            27341238584,
+                            479.5158996582031
+                        ],
+                        [
+                            27391345750,
+                            489.62176418304443
+                        ],
+                        [
+                            27441516834,
+                            499.7197389602661
+                        ],
+                        [
+                            27491744875,
+                            509.8162450790405
+                        ],
+                        [
+                            27541882834,
+                            613.6416501998901
+                        ],
+                        [
+                            27541887542,
+                            713.1845741271973
+                        ],
+                        [
+                            27590176250,
+                            510.63603496551514
+                        ],
+                        [
+                            27590180125,
+                            299.5082845687866
+                        ],
+                        [
+                            27590182000,
+                            400.44622802734375
+                        ],
+                        [
+                            33876560292,
+                            226.5068359375
+                        ],
+                        [
+                            33926610959,
+                            236.6024045944214
+                        ],
+                        [
+                            33976974417,
+                            246.70264434814453
+                        ],
+                        [
+                            34027762292,
+                            256.8023986816406
+                        ],
+                        [
+                            34078141084,
+                            266.8988256454468
+                        ],
+                        [
+                            34128111375,
+                            276.9946537017822
+                        ],
+                        [
+                            34177902125,
+                            287.092848777771
+                        ],
+                        [
+                            34227966084,
+                            297.19825744628906
+                        ],
+                        [
+                            34279850084,
+                            307.29260444641113
+                        ],
+                        [
+                            34330197167,
+                            411.15535163879395
+                        ],
+                        [
+                            34330202042,
+                            510.6759967803955
+                        ],
+                        [
+                            34350060500,
+                            510.6719083786011
+                        ],
+                        [
+                            34364198625,
+                            299.63039112091064
+                        ],
+                        [
+                            34364201125,
+                            400.5682888031006
+                        ],
+                        [
+                            40071087750,
+                            429.1038188934326
+                        ],
+                        [
+                            40121409042,
+                            439.2013692855835
+                        ],
+                        [
+                            40171711625,
+                            449.2979335784912
+                        ],
+                        [
+                            40222001250,
+                            459.39466094970703
+                        ],
+                        [
+                            40271841667,
+                            469.4893798828125
+                        ],
+                        [
+                            40321495000,
+                            479.58735752105713
+                        ],
+                        [
+                            40375800709,
+                            489.6890983581543
+                        ],
+                        [
+                            40428274334,
+                            499.78446674346924
+                        ],
+                        [
+                            40479811625,
+                            509.8800210952759
+                        ],
+                        [
+                            40533022917,
+                            613.6756811141968
+                        ],
+                        [
+                            40533028125,
+                            713.2293691635132
+                        ],
+                        [
+                            40587219125,
+                            510.64727115631104
+                        ],
+                        [
+                            40587221709,
+                            409.6160936355591
+                        ],
+                        [
+                            40587223667,
+                            510.55396842956543
+                        ],
+                        [
+                            47790951709,
+                            429.0920524597168
+                        ],
+                        [
+                            47841101334,
+                            439.1870985031128
+                        ],
+                        [
+                            47891185000,
+                            449.28345680236816
+                        ],
+                        [
+                            47941310459,
+                            459.38704204559326
+                        ],
+                        [
+                            47991752292,
+                            469.48463344573975
+                        ],
+                        [
+                            48042708417,
+                            479.5813522338867
+                        ],
+                        [
+                            48093300667,
+                            489.67882537841797
+                        ],
+                        [
+                            48143584334,
+                            499.77601146698
+                        ],
+                        [
+                            48193743959,
+                            509.8751621246338
+                        ],
+                        [
+                            48244729500,
+                            613.735912322998
+                        ],
+                        [
+                            48244734834,
+                            713.2460527420044
+                        ],
+                        [
+                            48257543667,
+                            612.3093776702881
+                        ],
+                        [
+                            48257545959,
+                            713.2463274002075
+                        ],
+                        [
+                            48278979792,
+                            308.8208122253418
+                        ],
+                        [
+                            48278982250,
+                            409.7586717605591
+                        ],
+                        [
+                            56827898334,
+                            438.29286670684814
+                        ],
+                        [
+                            56880421959,
+                            448.3909025192261
+                        ],
+                        [
+                            56934005709,
+                            458.4880208969116
+                        ],
+                        [
+                            56986345084,
+                            468.58344173431396
+                        ],
+                        [
+                            57054460375,
+                            533.0442228317261
+                        ],
+                        [
+                            57054465667,
+                            588.6047277450562
+                        ],
+                        [
+                            57084488625,
+                            332.34535026550293
+                        ],
+                        [
+                            57094288459,
+                            210.34710597991943
+                        ],
+                        [
+                            57094291417,
+                            266.76728439331055
+                        ],
+                        [
+                            57099187125,
+                            323.18707370758057
+                        ]
+                    ],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 47.65563469428212,
+                    "n_core_utilization": 0.017730176800264903,
+                    "n_cpu_percent_c": 0.26576150369326484,
+                    "n_cpu_percent_python": 4.530590232401833,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0.0,
+                    "n_growth_mb": 713.4345388412476,
+                    "n_malloc_mb": 3310.2035398483276,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 713.4345388412476,
+                    "n_python_fraction": 0.9999917392217907,
+                    "n_sys_percent": 29.01853763392684,
+                    "n_usage_fraction": 0.9333701933799883,
+                    "start_outermost_loop": 48,
+                    "start_region_line": 46
+                },
+                {
+                    "end_outermost_loop": 49,
+                    "end_region_line": 58,
+                    "line": "            file=self.file,\n",
+                    "lineno": 49,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 49,
+                    "start_region_line": 46
+                },
+                {
+                    "end_outermost_loop": 50,
+                    "end_region_line": 58,
+                    "line": "            start_second=start_time,\n",
+                    "lineno": 50,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 50,
+                    "start_region_line": 46
+                },
+                {
+                    "end_outermost_loop": 51,
+                    "end_region_line": 58,
+                    "line": "            duration=self.chunk_length,\n",
+                    "lineno": 51,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 51,
+                    "start_region_line": 46
+                },
+                {
+                    "end_outermost_loop": 52,
+                    "end_region_line": 58,
+                    "line": "            format=\"mp3\"\n",
+                    "lineno": 52,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 52,
+                    "start_region_line": 46
+                },
+                {
+                    "end_outermost_loop": 53,
+                    "end_region_line": 58,
+                    "line": "        )\n",
+                    "lineno": 53,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 53,
+                    "start_region_line": 46
+                },
+                {
+                    "end_outermost_loop": 54,
+                    "end_region_line": 58,
+                    "line": "        buffer = io.BytesIO()\n",
+                    "lineno": 54,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 54,
+                    "start_region_line": 46
+                },
+                {
+                    "end_outermost_loop": 55,
+                    "end_region_line": 58,
+                    "line": "        mp3.export(buffer, format=\"mp3\", bitrate=\"128k\")\n",
+                    "lineno": 55,
+                    "memory_samples": [
+                        [
+                            15640577250,
+                            419.2613868713379
+                        ],
+                        [
+                            23741551167,
+                            418.93684673309326
+                        ],
+                        [
+                            32478222334,
+                            418.9782180786133
+                        ],
+                        [
+                            39111386667,
+                            419.0056686401367
+                        ],
+                        [
+                            45393303667,
+                            418.98888874053955
+                        ],
+                        [
+                            52956644334,
+                            428.19727325439453
+                        ],
+                        [
+                            59905882584,
+                            333.57795810699463
+                        ]
+                    ],
+                    "n_avg_mb": 119.70244789123535,
+                    "n_copy_mb_s": 3.528728460960268,
+                    "n_core_utilization": 0.0005104098173267832,
+                    "n_cpu_percent_c": 0.00040186081992937345,
+                    "n_cpu_percent_python": 0.20509204926216917,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0.0,
+                    "n_growth_mb": 119.70244789123535,
+                    "n_malloc_mb": 119.70244789123535,
+                    "n_mallocs": 1,
+                    "n_peak_mb": 119.70244789123535,
+                    "n_python_fraction": 0.9998446723508956,
+                    "n_sys_percent": 50.120220620241525,
+                    "n_usage_fraction": 0.033752213599958746,
+                    "start_outermost_loop": 55,
+                    "start_region_line": 46
+                },
+                {
+                    "end_outermost_loop": 56,
+                    "end_region_line": 58,
+                    "line": "        del mp3\n",
+                    "lineno": 56,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 56,
+                    "start_region_line": 46
+                },
+                {
+                    "end_outermost_loop": 57,
+                    "end_region_line": 58,
+                    "line": "        gc.collect()\n",
+                    "lineno": 57,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.08728516091192147,
+                    "n_cpu_percent_c": 0.14404162386467903,
+                    "n_cpu_percent_python": 0.09673344273967721,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0.0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.10403593003131446,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 57,
+                    "start_region_line": 46
+                },
+                {
+                    "end_outermost_loop": 58,
+                    "end_region_line": 58,
+                    "line": "        return buffer\n",
+                    "lineno": 58,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 58,
+                    "start_region_line": 46
+                }
+            ],
+            "percent_cpu_time": 84.77818384224429
+        },
+        "/Users/arkar/Desktop/NUS/Projects/trackfish/utils/models.py": {
+            "functions": [],
+            "imports": [
+                "from dataclasses import dataclass, field",
+                "import io",
+                "from typing import Any, Dict, Optional",
+                "import aiohttp"
+            ],
+            "leaks": {},
+            "lines": [
+                {
+                    "end_outermost_loop": 1,
+                    "end_region_line": 1,
+                    "line": "from dataclasses import dataclass, field\n",
+                    "lineno": 1,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 1,
+                    "start_region_line": 1
+                },
+                {
+                    "end_outermost_loop": 2,
+                    "end_region_line": 2,
+                    "line": "import io\n",
+                    "lineno": 2,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 2,
+                    "start_region_line": 2
+                },
+                {
+                    "end_outermost_loop": 3,
+                    "end_region_line": 3,
+                    "line": "from typing import Any, Dict, Optional\n",
+                    "lineno": 3,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 3,
+                    "start_region_line": 3
+                },
+                {
+                    "end_outermost_loop": 4,
+                    "end_region_line": 4,
+                    "line": "from config import api_key\n",
+                    "lineno": 4,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 4,
+                    "start_region_line": 4
+                },
+                {
+                    "end_outermost_loop": 5,
+                    "end_region_line": 5,
+                    "line": "import aiohttp\n",
+                    "lineno": 5,
+                    "memory_samples": [
+                        [
+                            298961625,
+                            10.000011444091797
+                        ]
+                    ],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 1.8311396448011987,
+                    "n_core_utilization": 0.10028980589401387,
+                    "n_cpu_percent_c": 0.0462382365847,
+                    "n_cpu_percent_python": 0.04763391015215791,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0.0,
+                    "n_growth_mb": 10.000011444091797,
+                    "n_malloc_mb": 10.000011444091797,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 10.000011444091797,
+                    "n_python_fraction": 0.993568,
+                    "n_sys_percent": 0.02312896057915119,
+                    "n_usage_fraction": 0.0028196793650343698,
+                    "start_outermost_loop": 5,
+                    "start_region_line": 5
+                },
+                {
+                    "end_outermost_loop": 6,
+                    "end_region_line": 6,
+                    "line": "import streamlit as st\n",
+                    "lineno": 6,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 6,
+                    "start_region_line": 6
+                },
+                {
+                    "end_outermost_loop": 7,
+                    "end_region_line": 7,
+                    "line": "\n",
+                    "lineno": 7,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 7,
+                    "start_region_line": 7
+                },
+                {
+                    "end_outermost_loop": 8,
+                    "end_region_line": 8,
+                    "line": "@dataclass(frozen=True)\n",
+                    "lineno": 8,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 8,
+                    "start_region_line": 8
+                },
+                {
+                    "end_outermost_loop": 21,
+                    "end_region_line": 21,
+                    "line": "class Track:\n",
                     "lineno": 9,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3626,8 +5933,8 @@ Prism.languages.py = Prism.languages.python;
                 },
                 {
                     "end_outermost_loop": 10,
-                    "end_region_line": 10,
-                    "line": "from audio_downloader import AudioDownloader\n",
+                    "end_region_line": 21,
+                    "line": "    track_id: int = field(hash=True)\n",
                     "lineno": 10,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3646,12 +5953,12 @@ Prism.languages.py = Prism.languages.python;
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 10,
-                    "start_region_line": 10
+                    "start_region_line": 9
                 },
                 {
                     "end_outermost_loop": 11,
-                    "end_region_line": 11,
-                    "line": "\n",
+                    "end_region_line": 21,
+                    "line": "    title: str = field(hash=True)\n",
                     "lineno": 11,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3670,12 +5977,12 @@ Prism.languages.py = Prism.languages.python;
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 11,
-                    "start_region_line": 11
+                    "start_region_line": 9
                 },
                 {
-                    "end_outermost_loop": 61,
-                    "end_region_line": 61,
-                    "line": "class AudioFileProcessor:\n",
+                    "end_outermost_loop": 12,
+                    "end_region_line": 21,
+                    "line": "    artist: str = field(hash=True)\n",
                     "lineno": 12,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3694,12 +6001,12 @@ Prism.languages.py = Prism.languages.python;
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 12,
-                    "start_region_line": 12
+                    "start_region_line": 9
                 },
                 {
-                    "end_outermost_loop": 17,
-                    "end_region_line": 17,
-                    "line": "    def __init__(self, file: io.BytesIO, chunk_length_in_seconds: int) -\\u003e None:\n",
+                    "end_outermost_loop": 13,
+                    "end_region_line": 21,
+                    "line": "    genre: str = field(hash=True)\n",
                     "lineno": 13,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3718,12 +6025,12 @@ Prism.languages.py = Prism.languages.python;
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 13,
-                    "start_region_line": 13
+                    "start_region_line": 9
                 },
                 {
                     "end_outermost_loop": 14,
-                    "end_region_line": 17,
-                    "line": "        self.file = file\n",
+                    "end_region_line": 21,
+                    "line": "    spotify_link: str = field(hash=False, compare=False)\n",
                     "lineno": 14,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3742,36 +6049,36 @@ Prism.languages.py = Prism.languages.python;
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 14,
-                    "start_region_line": 13
+                    "start_region_line": 9
                 },
                 {
                     "end_outermost_loop": 15,
-                    "end_region_line": 17,
-                    "line": "        self.audio_file = sf.SoundFile(self.file)\n",
+                    "end_region_line": 21,
+                    "line": "    cover_art: str = field(hash=False, compare=False)\n",
                     "lineno": 15,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
                     "n_copy_mb_s": 0.0,
-                    "n_core_utilization": 0.055468767531543985,
+                    "n_core_utilization": 0.0,
                     "n_cpu_percent_c": 0.0,
-                    "n_cpu_percent_python": 0.030835286135894095,
+                    "n_cpu_percent_python": 0.0,
                     "n_gpu_avg_memory_mb": 0.0,
                     "n_gpu_peak_memory_mb": 0.0,
-                    "n_gpu_percent": 0.0,
+                    "n_gpu_percent": 0,
                     "n_growth_mb": 0.0,
                     "n_malloc_mb": 0.0,
                     "n_mallocs": 0,
                     "n_peak_mb": 0.0,
                     "n_python_fraction": 0,
-                    "n_sys_percent": 0.03865266065857606,
+                    "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 15,
-                    "start_region_line": 13
+                    "start_region_line": 9
                 },
                 {
                     "end_outermost_loop": 16,
-                    "end_region_line": 17,
-                    "line": "        self.chunk_length = chunk_length_in_seconds\n",
+                    "end_region_line": 21,
+                    "line": "\n",
                     "lineno": 16,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3790,12 +6097,12 @@ Prism.languages.py = Prism.languages.python;
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 16,
-                    "start_region_line": 13
+                    "start_region_line": 9
                 },
                 {
-                    "end_outermost_loop": 17,
-                    "end_region_line": 17,
-                    "line": "        self.audio_length_seconds = self.audio_file.frames / self.audio_file.samplerate\n",
+                    "end_outermost_loop": 21,
+                    "end_region_line": 21,
+                    "line": "    def __eq__(self, value: object) -\\u003e bool:\n",
                     "lineno": 17,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3814,12 +6121,12 @@ Prism.languages.py = Prism.languages.python;
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 17,
-                    "start_region_line": 13
+                    "start_region_line": 17
                 },
                 {
-                    "end_outermost_loop": 61,
-                    "end_region_line": 61,
-                    "line": "        #self.api = ShazamAPI()\n",
+                    "end_outermost_loop": 18,
+                    "end_region_line": 21,
+                    "line": "        return self.track_id == value.track_id and \\\n",
                     "lineno": 18,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3837,13 +6144,13 @@ Prism.languages.py = Prism.languages.python;
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 12,
-                    "start_region_line": 12
+                    "start_outermost_loop": 18,
+                    "start_region_line": 17
                 },
                 {
-                    "end_outermost_loop": 61,
-                    "end_region_line": 61,
-                    "line": "        #self.track_storage = TrackStorage()\n",
+                    "end_outermost_loop": 19,
+                    "end_region_line": 21,
+                    "line": "                self.title == value.title and \\\n",
                     "lineno": 19,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3861,13 +6168,13 @@ Prism.languages.py = Prism.languages.python;
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 12,
-                    "start_region_line": 12
+                    "start_outermost_loop": 19,
+                    "start_region_line": 17
                 },
                 {
                     "end_outermost_loop": 20,
-                    "end_region_line": 61,
-                    "line": "        \n",
+                    "end_region_line": 21,
+                    "line": "                self.artist == value.artist and \\\n",
                     "lineno": 20,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3886,12 +6193,12 @@ Prism.languages.py = Prism.languages.python;
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 20,
-                    "start_region_line": 12
+                    "start_region_line": 17
                 },
                 {
-                    "end_outermost_loop": 29,
-                    "end_region_line": 61,
-                    "line": "    async def process(self):\n",
+                    "end_outermost_loop": 21,
+                    "end_region_line": 21,
+                    "line": "                self.genre == value.genre\n",
                     "lineno": 21,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3910,12 +6217,12 @@ Prism.languages.py = Prism.languages.python;
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 21,
-                    "start_region_line": 12
+                    "start_region_line": 17
                 },
                 {
-                    "end_outermost_loop": 29,
-                    "end_region_line": 61,
-                    "line": "        #async with self.api:\n",
+                    "end_outermost_loop": 22,
+                    "end_region_line": 22,
+                    "line": "\n",
                     "lineno": 22,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3933,13 +6240,13 @@ Prism.languages.py = Prism.languages.python;
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 21,
-                    "start_region_line": 12
+                    "start_outermost_loop": 22,
+                    "start_region_line": 22
                 },
                 {
-                    "end_outermost_loop": 23,
-                    "end_region_line": 61,
-                    "line": "        tasks = [\n",
+                    "end_outermost_loop": 31,
+                    "end_region_line": 31,
+                    "line": "class MixTrack:\n",
                     "lineno": 23,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3958,12 +6265,12 @@ Prism.languages.py = Prism.languages.python;
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 23,
-                    "start_region_line": 12
+                    "start_region_line": 23
                 },
                 {
-                    "end_outermost_loop": 24,
-                    "end_region_line": 61,
-                    "line": "            self._worker(start, start+self.chunk_length)\n",
+                    "end_outermost_loop": 27,
+                    "end_region_line": 27,
+                    "line": "    def __init__(self, start_offset, end_offset, track):\n",
                     "lineno": 24,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3982,12 +6289,12 @@ Prism.languages.py = Prism.languages.python;
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 24,
-                    "start_region_line": 12
+                    "start_region_line": 24
                 },
                 {
                     "end_outermost_loop": 25,
-                    "end_region_line": 61,
-                    "line": "            for start in range(0, math.ceil(self.audio_length_seconds), self.chunk_length)\n",
+                    "end_region_line": 27,
+                    "line": "        self.start_offset = start_offset\n",
                     "lineno": 25,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -4006,12 +6313,12 @@ Prism.languages.py = Prism.languages.python;
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 25,
-                    "start_region_line": 12
+                    "start_region_line": 24
                 },
                 {
                     "end_outermost_loop": 26,
-                    "end_region_line": 61,
-                    "line": "        ]\n",
+                    "end_region_line": 27,
+                    "line": "        self.end_offset = end_offset\n",
                     "lineno": 26,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -4030,12 +6337,12 @@ Prism.languages.py = Prism.languages.python;
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 26,
-                    "start_region_line": 12
+                    "start_region_line": 24
                 },
                 {
-                    "end_outermost_loop": 28,
-                    "end_region_line": 28,
-                    "line": "        for task in asyncio.as_completed(tasks):\n",
+                    "end_outermost_loop": 27,
+                    "end_region_line": 27,
+                    "line": "        self.track = track\n",
                     "lineno": 27,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -4054,12 +6361,12 @@ Prism.languages.py = Prism.languages.python;
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 27,
-                    "start_region_line": 27
+                    "start_region_line": 24
                 },
                 {
                     "end_outermost_loop": 28,
-                    "end_region_line": 28,
-                    "line": "            await task\n",
+                    "end_region_line": 31,
+                    "line": "\n",
                     "lineno": 28,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -4077,13 +6384,13 @@ Prism.languages.py = Prism.languages.python;
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 27,
-                    "start_region_line": 27
+                    "start_outermost_loop": 28,
+                    "start_region_line": 23
                 },
                 {
-                    "end_outermost_loop": 29,
-                    "end_region_line": 61,
-                    "line": "        return\n",
+                    "end_outermost_loop": 31,
+                    "end_region_line": 31,
+                    "line": "    def update_offsets(self, start_offset, end_offset):\n",
                     "lineno": 29,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -4102,12 +6409,12 @@ Prism.languages.py = Prism.languages.python;
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 29,
-                    "start_region_line": 12
+                    "start_region_line": 29
                 },
                 {
                     "end_outermost_loop": 30,
-                    "end_region_line": 61,
-                    "line": "\n",
+                    "end_region_line": 31,
+                    "line": "        self.start_offset = min(self.start_offset, start_offset)\n",
                     "lineno": 30,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -4126,12 +6433,12 @@ Prism.languages.py = Prism.languages.python;
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 30,
-                    "start_region_line": 12
+                    "start_region_line": 29
                 },
                 {
-                    "end_outermost_loop": 37,
-                    "end_region_line": 61,
-                    "line": "    async def _worker(self, start_time, stop_time):\n",
+                    "end_outermost_loop": 31,
+                    "end_region_line": 31,
+                    "line": "        self.end_offset = max(self.end_offset, end_offset) \n",
                     "lineno": 31,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -4150,12 +6457,12 @@ Prism.languages.py = Prism.languages.python;
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 31,
-                    "start_region_line": 12
+                    "start_region_line": 29
                 },
                 {
-                    "end_outermost_loop": 37,
-                    "end_region_line": 61,
-                    "line": "        # mp3_chunk = self._get_mp3_buffer_from_chunk(start_time, stop_time)\n",
+                    "end_outermost_loop": 32,
+                    "end_region_line": 32,
+                    "line": "\n",
                     "lineno": 32,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -4173,13 +6480,13 @@ Prism.languages.py = Prism.languages.python;
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 31,
-                    "start_region_line": 12
+                    "start_outermost_loop": 32,
+                    "start_region_line": 32
                 },
                 {
-                    "end_outermost_loop": 37,
-                    "end_region_line": 61,
-                    "line": "        # track = await self.api.get_track_from_chunk(mp3_chunk)\n",
+                    "end_outermost_loop": 33,
+                    "end_region_line": 33,
+                    "line": "\n",
                     "lineno": 33,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -4197,13 +6504,13 @@ Prism.languages.py = Prism.languages.python;
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 31,
-                    "start_region_line": 12
+                    "start_outermost_loop": 33,
+                    "start_region_line": 33
                 },
                 {
-                    "end_outermost_loop": 37,
-                    "end_region_line": 61,
-                    "line": "        # if track:\n",
+                    "end_outermost_loop": 93,
+                    "end_region_line": 93,
+                    "line": "class ShazamAPI:\n",
                     "lineno": 34,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -4221,13 +6528,13 @@ Prism.languages.py = Prism.languages.python;
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 31,
-                    "start_region_line": 12
+                    "start_outermost_loop": 34,
+                    "start_region_line": 34
                 },
                 {
-                    "end_outermost_loop": 37,
-                    "end_region_line": 61,
-                    "line": "        #   await self.track_storage.add_track(track=track, start_offset=start_time, end_offset=stop_time)\n",
+                    "end_outermost_loop": 42,
+                    "end_region_line": 42,
+                    "line": "    def __init__(self):\n",
                     "lineno": 35,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -4245,37 +6552,37 @@ Prism.languages.py = Prism.languages.python;
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 31,
-                    "start_region_line": 12
+                    "start_outermost_loop": 35,
+                    "start_region_line": 35
                 },
                 {
                     "end_outermost_loop": 36,
-                    "end_region_line": 61,
-                    "line": "        time.sleep(1)\n",
+                    "end_region_line": 42,
+                    "line": "        self.url = \"https://shazam-song-recognition-api.p.rapidapi.com/recognize/file\"\n",
                     "lineno": 36,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
                     "n_copy_mb_s": 0.0,
-                    "n_core_utilization": 0.0016240180970864442,
-                    "n_cpu_percent_c": 0.004973962633355765,
-                    "n_cpu_percent_python": 0.5182057449035617,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
                     "n_gpu_avg_memory_mb": 0.0,
                     "n_gpu_peak_memory_mb": 0.0,
-                    "n_gpu_percent": 0.0,
+                    "n_gpu_percent": 0,
                     "n_growth_mb": 0.0,
                     "n_malloc_mb": 0.0,
                     "n_mallocs": 0,
                     "n_peak_mb": 0.0,
                     "n_python_fraction": 0,
-                    "n_sys_percent": 39.74574559535253,
+                    "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 36,
-                    "start_region_line": 12
+                    "start_region_line": 35
                 },
                 {
                     "end_outermost_loop": 37,
-                    "end_region_line": 61,
-                    "line": "        return\n",
+                    "end_region_line": 42,
+                    "line": "        self.headers = {\n",
                     "lineno": 37,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -4294,12 +6601,12 @@ Prism.languages.py = Prism.languages.python;
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 37,
-                    "start_region_line": 12
+                    "start_region_line": 35
                 },
                 {
                     "end_outermost_loop": 38,
-                    "end_region_line": 61,
-                    "line": "\n",
+                    "end_region_line": 42,
+                    "line": "            'x-rapidapi-key': st.secrets[\"api_key\"],\n",
                     "lineno": 38,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -4318,12 +6625,12 @@ Prism.languages.py = Prism.languages.python;
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 38,
-                    "start_region_line": 12
+                    "start_region_line": 35
                 },
                 {
-                    "end_outermost_loop": 49,
-                    "end_region_line": 49,
-                    "line": "    def _get_mp3_buffer_from_chunk(self, start_time, stop_time):\n",
+                    "end_outermost_loop": 39,
+                    "end_region_line": 42,
+                    "line": "            'x-rapidapi-host': \"shazam-song-recognition-api.p.rapidapi.com\",\n",
                     "lineno": 39,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -4342,12 +6649,12 @@ Prism.languages.py = Prism.languages.python;
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 39,
-                    "start_region_line": 39
+                    "start_region_line": 35
                 },
                 {
                     "end_outermost_loop": 40,
-                    "end_region_line": 49,
-                    "line": "        audio_section, sample_rate = self._read_audio_section(start_time, stop_time)\n",
+                    "end_region_line": 42,
+                    "line": "            'Content-Type': \"application/octet-stream\"\n",
                     "lineno": 40,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -4366,12 +6673,12 @@ Prism.languages.py = Prism.languages.python;
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 40,
-                    "start_region_line": 39
+                    "start_region_line": 35
                 },
                 {
                     "end_outermost_loop": 41,
-                    "end_region_line": 49,
-                    "line": "        mp3 = AudioSegment(\n",
+                    "end_region_line": 42,
+                    "line": "        }\n",
                     "lineno": 41,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -4390,12 +6697,12 @@ Prism.languages.py = Prism.languages.python;
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 41,
-                    "start_region_line": 39
+                    "start_region_line": 35
                 },
                 {
                     "end_outermost_loop": 42,
-                    "end_region_line": 49,
-                    "line": "            audio_section.astype(\"float32\").tobytes(),\n",
+                    "end_region_line": 42,
+                    "line": "        self.session = None\n",
                     "lineno": 42,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -4414,12 +6721,12 @@ Prism.languages.py = Prism.languages.python;
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 42,
-                    "start_region_line": 39
+                    "start_region_line": 35
                 },
                 {
                     "end_outermost_loop": 43,
-                    "end_region_line": 49,
-                    "line": "            frame_rate=sample_rate,\n",
+                    "end_region_line": 93,
+                    "line": "    \n",
                     "lineno": 43,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -4438,12 +6745,12 @@ Prism.languages.py = Prism.languages.python;
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 43,
-                    "start_region_line": 39
+                    "start_region_line": 34
                 },
                 {
-                    "end_outermost_loop": 44,
-                    "end_region_line": 49,
-                    "line": "            sample_width=audio_section.dtype.itemsize,\n",
+                    "end_outermost_loop": 46,
+                    "end_region_line": 93,
+                    "line": "    async def __aenter__(self):\n",
                     "lineno": 44,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -4462,12 +6769,12 @@ Prism.languages.py = Prism.languages.python;
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 44,
-                    "start_region_line": 39
+                    "start_region_line": 34
                 },
                 {
                     "end_outermost_loop": 45,
-                    "end_region_line": 49,
-                    "line": "            channels=1\n",
+                    "end_region_line": 93,
+                    "line": "        self.session = aiohttp.ClientSession()\n",
                     "lineno": 45,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -4486,12 +6793,12 @@ Prism.languages.py = Prism.languages.python;
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 45,
-                    "start_region_line": 39
+                    "start_region_line": 34
                 },
                 {
                     "end_outermost_loop": 46,
-                    "end_region_line": 49,
-                    "line": "        )\n",
+                    "end_region_line": 93,
+                    "line": "        return self\n",
                     "lineno": 46,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -4510,12 +6817,12 @@ Prism.languages.py = Prism.languages.python;
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 46,
-                    "start_region_line": 39
+                    "start_region_line": 34
                 },
                 {
                     "end_outermost_loop": 47,
-                    "end_region_line": 49,
-                    "line": "        buffer = io.BytesIO()\n",
+                    "end_region_line": 93,
+                    "line": "\n",
                     "lineno": 47,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -4534,12 +6841,12 @@ Prism.languages.py = Prism.languages.python;
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 47,
-                    "start_region_line": 39
+                    "start_region_line": 34
                 },
                 {
-                    "end_outermost_loop": 48,
-                    "end_region_line": 49,
-                    "line": "        mp3.export(buffer, format=\"mp3\", bitrate=\"128k\")\n",
+                    "end_outermost_loop": 49,
+                    "end_region_line": 93,
+                    "line": "    async def __aexit__(self, exc_type, exc, tb):\n",
                     "lineno": 48,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -4558,12 +6865,12 @@ Prism.languages.py = Prism.languages.python;
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 48,
-                    "start_region_line": 39
+                    "start_region_line": 34
                 },
                 {
                     "end_outermost_loop": 49,
-                    "end_region_line": 49,
-                    "line": "        return buffer\n",
+                    "end_region_line": 93,
+                    "line": "        await self.session.close()\n",
                     "lineno": 49,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -4582,11 +6889,11 @@ Prism.languages.py = Prism.languages.python;
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 49,
-                    "start_region_line": 39
+                    "start_region_line": 34
                 },
                 {
                     "end_outermost_loop": 50,
-                    "end_region_line": 61,
+                    "end_region_line": 93,
                     "line": "\n",
                     "lineno": 50,
                     "memory_samples": [],
@@ -4606,12 +6913,12 @@ Prism.languages.py = Prism.languages.python;
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 50,
-                    "start_region_line": 12
+                    "start_region_line": 34
                 },
                 {
-                    "end_outermost_loop": 61,
-                    "end_region_line": 61,
-                    "line": "    def _read_audio_section(self, start_time, stop_time):\n",
+                    "end_outermost_loop": 62,
+                    "end_region_line": 93,
+                    "line": "    async def get_track_from_chunk(self, chunk: io.BytesIO) -\\u003e Optional[Track]:\n",
                     "lineno": 51,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -4630,12 +6937,12 @@ Prism.languages.py = Prism.languages.python;
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 51,
-                    "start_region_line": 51
+                    "start_region_line": 34
                 },
                 {
-                    "end_outermost_loop": 52,
-                    "end_region_line": 61,
-                    "line": "        can_seek = self.audio_file.seekable()\n",
+                    "end_outermost_loop": 62,
+                    "end_region_line": 93,
+                    "line": "        # try:\n",
                     "lineno": 52,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -4653,13 +6960,13 @@ Prism.languages.py = Prism.languages.python;
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 52,
-                    "start_region_line": 51
+                    "start_outermost_loop": 51,
+                    "start_region_line": 34
                 },
                 {
-                    "end_outermost_loop": 54,
-                    "end_region_line": 61,
-                    "line": "        if not can_seek:\n",
+                    "end_outermost_loop": 62,
+                    "end_region_line": 93,
+                    "line": "        #     async with self.session.post(url=self.url, headers=self.headers, data=chunk) as response:\n",
                     "lineno": 53,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -4677,13 +6984,13 @@ Prism.languages.py = Prism.languages.python;
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 53,
-                    "start_region_line": 51
+                    "start_outermost_loop": 51,
+                    "start_region_line": 34
                 },
                 {
-                    "end_outermost_loop": 54,
-                    "end_region_line": 61,
-                    "line": "            raise ValueError(\"Not compatible with seeking\")\n",
+                    "end_outermost_loop": 62,
+                    "end_region_line": 93,
+                    "line": "        #         response.raise_for_status()\n",
                     "lineno": 54,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -4701,13 +7008,13 @@ Prism.languages.py = Prism.languages.python;
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 54,
-                    "start_region_line": 51
+                    "start_outermost_loop": 51,
+                    "start_region_line": 34
                 },
                 {
-                    "end_outermost_loop": 55,
-                    "end_region_line": 61,
-                    "line": "\n",
+                    "end_outermost_loop": 62,
+                    "end_region_line": 93,
+                    "line": "        #         resp_json = await response.json()\n",
                     "lineno": 55,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -4725,13 +7032,13 @@ Prism.languages.py = Prism.languages.python;
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 55,
-                    "start_region_line": 51
+                    "start_outermost_loop": 51,
+                    "start_region_line": 34
                 },
                 {
-                    "end_outermost_loop": 56,
-                    "end_region_line": 61,
-                    "line": "        sr = self.audio_file.samplerate\n",
+                    "end_outermost_loop": 62,
+                    "end_region_line": 93,
+                    "line": "        #         print(resp_json)\n",
                     "lineno": 56,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -4749,13 +7056,13 @@ Prism.languages.py = Prism.languages.python;
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 56,
-                    "start_region_line": 51
+                    "start_outermost_loop": 51,
+                    "start_region_line": 34
                 },
                 {
-                    "end_outermost_loop": 57,
-                    "end_region_line": 61,
-                    "line": "        start_frame = sr * start_time\n",
+                    "end_outermost_loop": 62,
+                    "end_region_line": 93,
+                    "line": "        #         return self._scan_track(resp_json)\n",
                     "lineno": 57,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -4773,13 +7080,13 @@ Prism.languages.py = Prism.languages.python;
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 57,
-                    "start_region_line": 51
+                    "start_outermost_loop": 51,
+                    "start_region_line": 34
                 },
                 {
-                    "end_outermost_loop": 58,
-                    "end_region_line": 61,
-                    "line": "        frames_to_read = sr * (stop_time - start_time)\n",
+                    "end_outermost_loop": 62,
+                    "end_region_line": 93,
+                    "line": "        # except aiohttp.ClientError as e:\n",
                     "lineno": 58,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -4797,13 +7104,13 @@ Prism.languages.py = Prism.languages.python;
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 58,
-                    "start_region_line": 51
+                    "start_outermost_loop": 51,
+                    "start_region_line": 34
                 },
                 {
-                    "end_outermost_loop": 59,
-                    "end_region_line": 61,
-                    "line": "        self.audio_file.seek(start_frame)\n",
+                    "end_outermost_loop": 62,
+                    "end_region_line": 93,
+                    "line": "        #     st.error(f\"HTTP error: {e}\")\n",
                     "lineno": 59,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -4821,13 +7128,13 @@ Prism.languages.py = Prism.languages.python;
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 59,
-                    "start_region_line": 51
+                    "start_outermost_loop": 51,
+                    "start_region_line": 34
                 },
                 {
-                    "end_outermost_loop": 60,
-                    "end_region_line": 61,
-                    "line": "        audio_section = self.audio_file.read(frames_to_read)\n",
+                    "end_outermost_loop": 62,
+                    "end_region_line": 93,
+                    "line": "        # except Exception as e:\n",
                     "lineno": 60,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -4845,13 +7152,13 @@ Prism.languages.py = Prism.languages.python;
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 60,
-                    "start_region_line": 51
+                    "start_outermost_loop": 51,
+                    "start_region_line": 34
                 },
                 {
-                    "end_outermost_loop": 61,
-                    "end_region_line": 61,
-                    "line": "        return audio_section, sr\n",
+                    "end_outermost_loop": 62,
+                    "end_region_line": 93,
+                    "line": "        #     st.error(f\"Unexpected error: {e}\")\n",
                     "lineno": 61,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -4869,13 +7176,13 @@ Prism.languages.py = Prism.languages.python;
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 61,
-                    "start_region_line": 51
+                    "start_outermost_loop": 51,
+                    "start_region_line": 34
                 },
                 {
                     "end_outermost_loop": 62,
-                    "end_region_line": 62,
-                    "line": "\n",
+                    "end_region_line": 93,
+                    "line": "        return None\n",
                     "lineno": 62,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -4894,12 +7201,12 @@ Prism.languages.py = Prism.languages.python;
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 62,
-                    "start_region_line": 62
+                    "start_region_line": 34
                 },
                 {
                     "end_outermost_loop": 63,
-                    "end_region_line": 63,
-                    "line": "audio_bytes = AudioDownloader().download(\"https://soundcloud.com/wildpearlradio/wild-pearl-radio-metal_upa\")\n",
+                    "end_region_line": 93,
+                    "line": "\n",
                     "lineno": 63,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -4918,12 +7225,12 @@ Prism.languages.py = Prism.languages.python;
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 63,
-                    "start_region_line": 63
+                    "start_region_line": 34
                 },
                 {
-                    "end_outermost_loop": 64,
-                    "end_region_line": 64,
-                    "line": "p = AudioFileProcessor(file=io.BytesIO(audio_bytes), chunk_length_in_seconds=600)\n",
+                    "end_outermost_loop": 89,
+                    "end_region_line": 89,
+                    "line": "    def _scan_track(self, resp: Dict[str, Any]) -\\u003e Optional[Track]:\n",
                     "lineno": 64,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -4946,8 +7253,8 @@ Prism.languages.py = Prism.languages.python;
                 },
                 {
                     "end_outermost_loop": 65,
-                    "end_region_line": 65,
-                    "line": "\n",
+                    "end_region_line": 89,
+                    "line": "        track_data = resp.get('track', {})\n",
                     "lineno": 65,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -4966,145 +7273,1093 @@ Prism.languages.py = Prism.languages.python;
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 65,
-                    "start_region_line": 65
+                    "start_region_line": 64
                 },
                 {
-                    "end_outermost_loop": 66,
-                    "end_region_line": 66,
-                    "line": "asyncio.run(p.process())\n",
+                    "end_outermost_loop": 67,
+                    "end_region_line": 89,
+                    "line": "        if not track_data:\n",
                     "lineno": 66,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
                     "n_copy_mb_s": 0.0,
-                    "n_core_utilization": 0.0021054731206596143,
+                    "n_core_utilization": 0.0,
                     "n_cpu_percent_c": 0.0,
-                    "n_cpu_percent_python": 0.0011704400334846584,
+                    "n_cpu_percent_python": 0.0,
                     "n_gpu_avg_memory_mb": 0.0,
                     "n_gpu_peak_memory_mb": 0.0,
-                    "n_gpu_percent": 0.0,
+                    "n_gpu_percent": 0,
                     "n_growth_mb": 0.0,
                     "n_malloc_mb": 0.0,
                     "n_mallocs": 0,
                     "n_peak_mb": 0.0,
                     "n_python_fraction": 0,
-                    "n_sys_percent": 0.0683175067609855,
+                    "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 66,
-                    "start_region_line": 66
+                    "start_region_line": 64
+                },
+                {
+                    "end_outermost_loop": 67,
+                    "end_region_line": 89,
+                    "line": "            return None\n",
+                    "lineno": 67,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 67,
+                    "start_region_line": 64
+                },
+                {
+                    "end_outermost_loop": 68,
+                    "end_region_line": 89,
+                    "line": "\n",
+                    "lineno": 68,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 68,
+                    "start_region_line": 64
+                },
+                {
+                    "end_outermost_loop": 69,
+                    "end_region_line": 89,
+                    "line": "        track_id = track_data.get('key', 'Unknown')\n",
+                    "lineno": 69,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 69,
+                    "start_region_line": 64
+                },
+                {
+                    "end_outermost_loop": 70,
+                    "end_region_line": 89,
+                    "line": "        track_name = track_data.get('title', 'Unknown Title')\n",
+                    "lineno": 70,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 70,
+                    "start_region_line": 64
+                },
+                {
+                    "end_outermost_loop": 71,
+                    "end_region_line": 89,
+                    "line": "        artist_name = track_data.get('subtitle', 'Unknown Artist')\n",
+                    "lineno": 71,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 71,
+                    "start_region_line": 64
+                },
+                {
+                    "end_outermost_loop": 72,
+                    "end_region_line": 89,
+                    "line": "        track_genre = track_data.get(\"genres\", {}).get(\"primary\", \"Unknown Genre\")\n",
+                    "lineno": 72,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 72,
+                    "start_region_line": 64
+                },
+                {
+                    "end_outermost_loop": 73,
+                    "end_region_line": 89,
+                    "line": "\n",
+                    "lineno": 73,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 73,
+                    "start_region_line": 64
+                },
+                {
+                    "end_outermost_loop": 74,
+                    "end_region_line": 89,
+                    "line": "        spotify_link = None\n",
+                    "lineno": 74,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 74,
+                    "start_region_line": 64
+                },
+                {
+                    "end_outermost_loop": 78,
+                    "end_region_line": 78,
+                    "line": "        for provider in track_data.get(\"hub\", {}).get(\"providers\", []):\n",
+                    "lineno": 75,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 75,
+                    "start_region_line": 75
+                },
+                {
+                    "end_outermost_loop": 78,
+                    "end_region_line": 78,
+                    "line": "            if provider.get(\"type\") == \"SPOTIFY\":\n",
+                    "lineno": 76,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 75,
+                    "start_region_line": 75
+                },
+                {
+                    "end_outermost_loop": 78,
+                    "end_region_line": 78,
+                    "line": "                spotify_link = provider.get(\"actions\", [{}])[0].get(\"uri\", \"No Spotify Link\")\n",
+                    "lineno": 77,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 75,
+                    "start_region_line": 75
+                },
+                {
+                    "end_outermost_loop": 78,
+                    "end_region_line": 78,
+                    "line": "                break\n",
+                    "lineno": 78,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 75,
+                    "start_region_line": 75
+                },
+                {
+                    "end_outermost_loop": 79,
+                    "end_region_line": 89,
+                    "line": "\n",
+                    "lineno": 79,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 79,
+                    "start_region_line": 64
+                },
+                {
+                    "end_outermost_loop": 80,
+                    "end_region_line": 89,
+                    "line": "        cover_art = track_data.get(\"images\", {}).get(\"coverart\", \"No Cover Art\")\n",
+                    "lineno": 80,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 80,
+                    "start_region_line": 64
+                },
+                {
+                    "end_outermost_loop": 81,
+                    "end_region_line": 89,
+                    "line": "\n",
+                    "lineno": 81,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 81,
+                    "start_region_line": 64
+                },
+                {
+                    "end_outermost_loop": 82,
+                    "end_region_line": 89,
+                    "line": "        return Track(\n",
+                    "lineno": 82,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 82,
+                    "start_region_line": 64
+                },
+                {
+                    "end_outermost_loop": 83,
+                    "end_region_line": 89,
+                    "line": "            track_id=track_id,\n",
+                    "lineno": 83,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 83,
+                    "start_region_line": 64
+                },
+                {
+                    "end_outermost_loop": 84,
+                    "end_region_line": 89,
+                    "line": "            title=track_name,\n",
+                    "lineno": 84,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 84,
+                    "start_region_line": 64
+                },
+                {
+                    "end_outermost_loop": 85,
+                    "end_region_line": 89,
+                    "line": "            artist=artist_name,\n",
+                    "lineno": 85,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 85,
+                    "start_region_line": 64
+                },
+                {
+                    "end_outermost_loop": 86,
+                    "end_region_line": 89,
+                    "line": "            spotify_link=spotify_link,\n",
+                    "lineno": 86,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 86,
+                    "start_region_line": 64
+                },
+                {
+                    "end_outermost_loop": 87,
+                    "end_region_line": 89,
+                    "line": "            genre=track_genre,\n",
+                    "lineno": 87,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 87,
+                    "start_region_line": 64
+                },
+                {
+                    "end_outermost_loop": 88,
+                    "end_region_line": 89,
+                    "line": "            cover_art=cover_art\n",
+                    "lineno": 88,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 88,
+                    "start_region_line": 64
+                },
+                {
+                    "end_outermost_loop": 89,
+                    "end_region_line": 89,
+                    "line": "        )\n",
+                    "lineno": 89,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 89,
+                    "start_region_line": 64
+                },
+                {
+                    "end_outermost_loop": 90,
+                    "end_region_line": 93,
+                    "line": "\n",
+                    "lineno": 90,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 90,
+                    "start_region_line": 34
+                },
+                {
+                    "end_outermost_loop": 93,
+                    "end_region_line": 93,
+                    "line": "    async def close(self):\n",
+                    "lineno": 91,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 91,
+                    "start_region_line": 34
+                },
+                {
+                    "end_outermost_loop": 93,
+                    "end_region_line": 93,
+                    "line": "        if self.session:\n",
+                    "lineno": 92,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 92,
+                    "start_region_line": 34
+                },
+                {
+                    "end_outermost_loop": 93,
+                    "end_region_line": 93,
+                    "line": "            await self.session.close()\n",
+                    "lineno": 93,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 93,
+                    "start_region_line": 34
                 }
             ],
-            "percent_cpu_time": 40.40790119647839
+            "percent_cpu_time": 0.1170011073160091
         }
     },
     "gpu": false,
     "gpu_device": "",
-    "growth_rate": 83.73120687453897,
-    "max_footprint_fname": "/Users/arkar/Desktop/NUS/Projects/trackfish/utils/audio_downloader.py",
-    "max_footprint_lineno": 24,
-    "max_footprint_mb": 108.98276042938232,
+    "growth_rate": 9.408475435723426,
+    "max_footprint_fname": "/Users/arkar/Desktop/NUS/Projects/trackfish/utils/audio_file_processor.py",
+    "max_footprint_lineno": 48,
+    "max_footprint_mb": 713.4345388412476,
     "max_footprint_python_fraction": 1.0,
     "memory": true,
-    "program": "/Users/arkar/Desktop/NUS/Projects/trackfish/utils/audio_file_processor.py",
+    "program": "/Users/arkar/Desktop/NUS/Projects/trackfish/mem_profile_test.py",
     "samples": [
         [
-            349140041,
-            10.012093544006348
+            298952375,
+            10.188497543334961
         ],
         [
-            349142208,
-            10.10633659362793
+            2237404542,
+            41.109025955200195
         ],
         [
-            349143041,
-            10.200579643249512
+            2877287459,
+            52.556220054626465
         ],
         [
-            536831500,
-            20.75311851501465
+            2877289875,
+            52.65046310424805
         ],
         [
-            536832666,
-            20.84736156463623
+            5100634417,
+            78.69718933105469
         ],
         [
-            2273431833,
-            30.915098190307617
+            7027612500,
+            104.7348222732544
         ],
         [
-            2273434291,
-            31.0093412399292
+            8294810667,
+            117.63727378845215
         ],
         [
-            3295336416,
-            43.21261405944824
+            10467744709,
+            116.69799423217773
         ],
         [
-            3295339291,
-            43.306857109069824
+            10517066084,
+            126.69920921325684
         ],
         [
-            4223488500,
-            57.22807216644287
+            10517067375,
+            126.79345226287842
         ],
         [
-            4223491250,
-            57.32231521606445
+            10666907917,
+            156.98336029052734
         ],
         [
-            4687757125,
-            69.13458919525146
+            10819918417,
+            187.27816677093506
         ],
         [
-            4687758791,
-            69.22883224487305
+            10819919125,
+            187.37240982055664
         ],
         [
-            5174291291,
-            58.924763679504395
+            10869592000,
+            197.4697551727295
         ],
         [
-            5575518375,
-            70.840407371521
+            10956945084,
+            312.1325149536133
         ],
         [
-            5575520083,
-            70.93465042114258
+            10958213459,
+            401.79981231689453
         ],
         [
-            6394544166,
-            82.85417175292969
+            10985429917,
+            299.9750175476074
         ],
         [
-            6394546416,
-            82.94841480255127
+            18536440667,
+            429.35883140563965
         ],
         [
-            6608033375,
-            70.94645118713379
+            18586808875,
+            439.4573059082031
         ],
         [
-            6735597833,
-            83.86741733551025
+            18586812834,
+            439.5515489578247
         ],
         [
-            6735599291,
-            83.96166038513184
+            18687515625,
+            459.7482376098633
         ],
         [
-            7667803666,
-            96.87382698059082
+            18737397459,
+            469.8524169921875
         ],
         [
-            7667805125,
-            96.9680700302124
+            18788062375,
+            479.85882472991943
         ],
         [
-            8750317375,
-            108.88851737976074
+            18888348375,
+            500.0503349304199
         ],
         [
-            8750320250,
-            108.98276042938232
+            18938135334,
+            510.2397985458374
+        ],
+        [
+            18977298917,
+            713.2974166870117
+        ],
+        [
+            19011079625,
+            693.2894096374512
+        ],
+        [
+            19011080625,
+            673.2810344696045
+        ],
+        [
+            19011081542,
+            653.2720928192139
+        ],
+        [
+            19011082417,
+            633.2624588012695
+        ],
+        [
+            19011082959,
+            623.254506111145
+        ],
+        [
+            19011083375,
+            613.2543039321899
+        ],
+        [
+            19011085167,
+            510.6869773864746
+        ],
+        [
+            27139152959,
+            439.22454261779785
+        ],
+        [
+            27240438709,
+            459.4174528121948
+        ],
+        [
+            27291064292,
+            469.41989517211914
+        ],
+        [
+            27341230000,
+            479.6101427078247
+        ],
+        [
+            27391338667,
+            489.62176418304443
+        ],
+        [
+            27391339750,
+            489.716007232666
+        ],
+        [
+            27491739750,
+            509.8162450790405
+        ],
+        [
+            27541874792,
+            613.6416501998901
+        ],
+        [
+            27590135667,
+            683.2721452713013
+        ],
+        [
+            27590139584,
+            510.7313013076782
+        ],
+        [
+            27590141250,
+            409.88595390319824
+        ],
+        [
+            32478198875,
+            418.9782180786133
+        ],
+        [
+            32478201417,
+            419.07246112823486
+        ],
+        [
+            32478204000,
+            379.06599712371826
+        ],
+        [
+            32478204875,
+            359.0589838027954
+        ],
+        [
+            32478205709,
+            339.0501880645752
+        ],
+        [
+            33926605417,
+            236.69664764404297
+        ],
+        [
+            34027756500,
+            256.8023986816406
+        ],
+        [
+            34078135334,
+            266.8988256454468
+        ],
+        [
+            34177896542,
+            287.092848777771
+        ],
+        [
+            34227960459,
+            297.29250049591064
+        ],
+        [
+            34330188625,
+            411.15535163879395
+        ],
+        [
+            34330189625,
+            411.2495946884155
+        ],
+        [
+            39111358375,
+            419.0056686401367
+        ],
+        [
+            40121401459,
+            439.2013692855835
+        ],
+        [
+            40271835084,
+            469.4893798828125
+        ],
+        [
+            40271836250,
+            469.5836229324341
+        ],
+        [
+            40321489417,
+            479.58735752105713
+        ],
+        [
+            40375791417,
+            489.6890983581543
+        ],
+        [
+            40428265917,
+            499.78446674346924
+        ],
+        [
+            40428267459,
+            499.8787097930908
+        ],
+        [
+            40479805042,
+            509.97426414489746
+        ],
+        [
+            40533004250,
+            613.6756811141968
+        ],
+        [
+            40587171792,
+            683.3147392272949
+        ],
+        [
+            40587172334,
+            673.3117990493774
+        ],
+        [
+            40587173292,
+            653.2995414733887
+        ],
+        [
+            40587176000,
+            633.2930631637573
+        ],
+        [
+            40587176542,
+            623.289210319519
+        ],
+        [
+            40587180084,
+            510.8357572555542
+        ],
+        [
+            40587180709,
+            409.80457973480225
+        ],
+        [
+            40589038917,
+            400.64610290527344
+        ],
+        [
+            40589039917,
+            400.740345954895
+        ],
+        [
+            45393285459,
+            419.08313179016113
+        ],
+        [
+            47841096709,
+            439.2813415527344
+        ],
+        [
+            47891180917,
+            449.37769985198975
+        ],
+        [
+            47991742250,
+            469.5788764953613
+        ],
+        [
+            48042702917,
+            479.5813522338867
+        ],
+        [
+            48042703792,
+            479.6755952835083
+        ],
+        [
+            48093296417,
+            489.77306842803955
+        ],
+        [
+            48193738875,
+            509.8751621246338
+        ],
+        [
+            48193739750,
+            509.96940517425537
+        ],
+        [
+            48257534917,
+            713.3405704498291
+        ],
+        [
+            48278939417,
+            703.3320016860962
+        ],
+        [
+            48278942834,
+            643.3049335479736
+        ],
+        [
+            48278943334,
+            633.3026542663574
+        ],
+        [
+            48279357375,
+            409.94715785980225
+        ],
+        [
+            52956625625,
+            428.2915163040161
+        ],
+        [
+            56933995792,
+            458.4880208969116
+        ],
+        [
+            57054452167,
+            533.1384658813477
+        ],
+        [
+            57084446959,
+            558.6929082870483
+        ],
+        [
+            57084449625,
+            508.6681480407715
+        ],
+        [
+            57084450292,
+            498.6651449203491
+        ],
+        [
+            57084451375,
+            478.6599884033203
+        ],
+        [
+            57084451875,
+            376.9587860107422
+        ],
+        [
+            57084453834,
+            266.86046504974365
+        ],
+        [
+            57094280417,
+            210.44134902954102
+        ],
+        [
+            59905865542,
+            333.6722011566162
         ]
     ],
     "stacks": []

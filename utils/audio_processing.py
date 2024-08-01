@@ -2,7 +2,6 @@ import asyncio
 import io
 from pydub import AudioSegment
 from . import ShazamAPI, TrackStorage
-import streamlit as st
 
 def split_audio(file_path, chunk_length_ms):
     audio = AudioSegment.from_file(file_path)
@@ -12,27 +11,20 @@ def split_audio(file_path, chunk_length_ms):
         chunks.append((chunk, start, start+chunk_length_ms))
     return chunks
 
+
 async def process(file, chunk_length_ms=60000):
     track_store = TrackStorage()
     api = ShazamAPI()
-
+    
     def worker_wrapper(chunk):
         return worker(chunk, track_store, api)
 
-    st.write("Splitting audio into chunks")
     chunks = split_audio(file, chunk_length_ms)
-    st.write("Split audio into chunks")
 
-    prog = 0
-    prog_diff = 100 // len(chunks)
-    bar = st.progress(prog, text="Analysing chunks...")
     async with api:
         tasks = [worker_wrapper(chunk) for chunk in chunks]
         for task in asyncio.as_completed(tasks):
             await task
-            prog += prog_diff
-            bar.progress(prog, text="Analysing chunks...")
-    bar.progress(100, text="All chunks read")
     return await track_store.get_tracks()
 
 
