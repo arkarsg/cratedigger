@@ -2,6 +2,9 @@ import pandas as pd
 import streamlit as st
 
 def show(tracks):
+    if not tracks:
+        st.info("No tracks found")
+        return
     write_intro()
     tracks_df = format_tracks(tracks)
     show_table(tracks_df)

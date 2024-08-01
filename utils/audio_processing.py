@@ -3,7 +3,7 @@ import io
 from pydub import AudioSegment
 from . import ShazamAPI, TrackStorage
 import streamlit as st
- 
+
 def split_audio(file_path, chunk_length_ms):
     audio = AudioSegment.from_file(file_path)
     chunks = []

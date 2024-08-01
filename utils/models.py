@@ -35,7 +35,7 @@ class ShazamAPI:
     def __init__(self):
         self.url = "https://shazam-song-recognition-api.p.rapidapi.com/recognize/file"
         self.headers = {
-            'x-rapidapi-key': api_key,
+            'x-rapidapi-key': st.secrets["api_key"],
             'x-rapidapi-host': "shazam-song-recognition-api.p.rapidapi.com",
             'Content-Type': "application/octet-stream"
         }
@@ -51,8 +51,10 @@ class ShazamAPI:
     async def get_track_from_chunk(self, chunk: io.BytesIO) -> Optional[Track]:
         try:
             async with self.session.post(url=self.url, headers=self.headers, data=chunk) as response:
+                print("Query")
                 response.raise_for_status()
                 resp_json = await response.json()
+                print(resp_json)
                 return self._scan_track(resp_json)
         except aiohttp.ClientError as e:
             st.error(f"HTTP error: {e}")

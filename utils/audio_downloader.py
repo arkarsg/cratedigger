@@ -18,7 +18,7 @@ class AudioDownloader:
             'logtostderr': True
         }
 
-    def dowload(self, link):
+    def download(self, link):
         buffer = io.BytesIO()
         with redirect_stdout(buffer), yt_dlp.YoutubeDL(self.opts) as ydl:
             ydl.download([link])
