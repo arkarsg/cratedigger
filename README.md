@@ -6,7 +6,7 @@ The application is deployed on [Streamlit](https://cratedigger.streamlit.app/)
 
 ## Overview
 
-CrateDigger is a Streamlit-based application that allows users to upload audio files or provide links to DJ mixes from platforms like YouTube or SoundCloud. The application then breaks these audio sources into user-defined chunks and queries each chunk against the Shazam API to identify tracks. This README documents the key technical iterations and optimizations made during the development journey of CrateDigger.
+CrateDigger is a Streamlit-based application that allows users to upload audio files or provide links to DJ mixes from platforms like YouTube or SoundCloud. The application then breaks these audio sources into user-defined chunks and queries each chunk against the Shazam API to identify tracks. 
 
 ## Key Technical Iterations
 
