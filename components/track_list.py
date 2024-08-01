@@ -26,6 +26,11 @@ def show_table(df):
         df,
         column_config={
             "track_id": None,
+            "start": st.column_config.TextColumn(
+                "Time",
+                help="Estimated timestamp of the track"
+            ),
+            "end": None,
             "title": st.column_config.TextColumn(
                 "Track",
                 help="Name of the track"
@@ -34,10 +39,7 @@ def show_table(df):
                 "Artist",
                 help="Artist of the track"
             ),
-            "genre": st.column_config.TextColumn(
-                "Genre",
-                help="Genre of the track"
-            ),
+            "genre": None,
             "spotify_link": st.column_config.LinkColumn(
                 "Spotify link",
                 display_text="Link"

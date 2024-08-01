@@ -65,6 +65,8 @@ class ShazamAPI:
                 st.warning("Could not get track information")
             elif e.status == 400:
                 st.warning("No track data found in chunk")
+            elif e.status == 504:
+                st.warning("You (working) ---> Gateway (working) ---> Server (took too long to respond)")
         except Exception as e:
             st.error("Something went wrong...")
         return None
