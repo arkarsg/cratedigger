@@ -1,3 +1,1 @@
-import streamlit as st
-
-api_key = st.secrets["api_key"]
+MAX_DURATION = 1 * 60 * 60 + 5 * 60

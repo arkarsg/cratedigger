@@ -1,7 +1,7 @@
 import streamlit as st
 from components import intro, track_form as tp, track_list, notice as nt
 from utils import querier, ShazamAPI
-from tracks_exceptions import InvalidUrlException, TooManySourceException, NoSourceException 
+from tracks_exceptions import InvalidUrlException, TooManySourceException, NoSourceException, MixTooBigException 
 import time
 
 async def run():
@@ -40,11 +40,12 @@ async def app(should_run):
                 s.update(label="Done", expanded=False, state='complete')
             st.success(f"Found tracks in {end - start:.{1}f} seconds")
             track_list.show(result)
+        except MixTooBigException as m:
+            s.update(label=m.message, expanded=False, state='error')
         except InvalidUrlException as i:
             st.error(i.message)
         except TooManySourceException as t:
             st.error(t.message)
         except NoSourceException as n:
             st.error(n.message)
-        except MemoryError:
-            st.error("The mix you are trying to ID is too large!")
+    

@@ -3,6 +3,8 @@ import io
 import math
 from pydub import AudioSegment 
 from . import ShazamAPI, TrackStorage
+from tracks_exceptions import MixTooBigException
+from config import MAX_DURATION
 import streamlit as st
 import soundfile as sf
 import gc
@@ -18,6 +20,9 @@ class AudioFileProcessor:
         self.track_storage = TrackStorage()
         
     async def process(self):
+        if self.audio_length_seconds >= MAX_DURATION:
+            raise MixTooBigException
+    
         n = self.audio_length_seconds // self.chunk_length
         prog = 0
         prog_delta = 100 // n

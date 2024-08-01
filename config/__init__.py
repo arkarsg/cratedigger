@@ -1,5 +1,5 @@
-from .config import api_key 
+from .config import MAX_DURATION 
 
 __all__ =[
-    "api_key",
+    "MAX_DURATION",
 ]
