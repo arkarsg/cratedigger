@@ -49,6 +49,7 @@ def show_table(df):
             )
         },
         hide_index=True,
+        width=800
     )
 
 def flatten_track(track):
