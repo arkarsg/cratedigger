@@ -7,6 +7,7 @@ import streamlit as st
 import soundfile as sf
 import gc
 
+TEXT = "Analysing chunks...     *This might take a while*"
 class AudioFileProcessor:
     def __init__(self, file: io.BytesIO, chunk_length_in_seconds: int) -> None:
         self.file = file 
@@ -20,7 +21,7 @@ class AudioFileProcessor:
         n = self.audio_length_seconds // self.chunk_length
         prog = 0
         prog_delta = 100 // n
-        bar = st.progress(prog, text="Analysing chunks...")
+        bar = st.progress(prog, text=TEXT)
 
         async with self.api:
             tasks = [
@@ -30,7 +31,7 @@ class AudioFileProcessor:
             for task in asyncio.as_completed(tasks):
                 await task
                 prog = int(min(100, prog + prog_delta))
-                bar.progress(prog, text="Analysing chunks...")
+                bar.progress(prog, text=TEXT)
         bar.progress(100, text="All chunks read!")
         return await self.track_storage.get_tracks()
 

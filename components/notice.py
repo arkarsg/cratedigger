@@ -1,6 +1,6 @@
 import streamlit as st
 
-@st.dialog("Hourly limit reached")
+@st.dialog("Hourly limit reached", width="large")
 def notify_rate_limit():
     st.write(
         """
@@ -16,7 +16,7 @@ def notify_rate_limit():
         """
     )
     
-@st.dialog("Monthly Plan limit reached")
+@st.dialog("Monthly Plan limit reached", width="large")
 def notify_plan_limit():
     st.write(
         """
