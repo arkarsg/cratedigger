@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 
 def show(tracks):
-    if not tracks:
+    if tracks is None:
         st.info("No tracks found")
         return
     write_intro()

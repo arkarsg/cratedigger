@@ -45,7 +45,6 @@ def flatten_track(track):
 def df_adapter(tracks):
     if tracks:
         df = pd.DataFrame([flatten_track(track) for _, track in tracks])
-        df = pd.DataFrame(tracks)
         df['start'] = pd.to_datetime(df['start'],
                 unit='s').dt.strftime('%H:%M:%S')
         df['end'] = pd.to_datetime(df['end'],
