@@ -61,9 +61,12 @@ class ShazamAPI:
                 resp_json = await response.json()
                 return self._scan_track(resp_json)
         except aiohttp.ClientError as e:
-            st.error(f"HTTP error: {e}")
+            if e.status == 502:
+                st.warning("Could not get track information")
+            elif e.status == 400:
+                st.warning("No track data found in chunk")
         except Exception as e:
-            st.error(f"Unexpected error: {e}")
+            st.error("Something went wrong...")
         return None
 
     def _scan_track(self, resp: Dict[str, Any]) -> Optional[Track]:

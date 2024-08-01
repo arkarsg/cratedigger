@@ -2,6 +2,7 @@ import streamlit as st
 from components import intro, track_form as tp, track_list, notice as nt
 from utils import querier, ShazamAPI
 from tracks_exceptions import InvalidUrlException, TooManySourceException, NoSourceException 
+import time
 
 async def run():
     limit_status = await check_api_limits()
@@ -33,8 +34,11 @@ async def app(should_run):
         try:
             with st.status("Digging for tracks...", expanded=True) as s:
                 querier.validate_data(data)
+                start = time.time()
                 result = await querier.query_tracks(data)
+                end = time.time()
                 s.update(label="Done", expanded=False, state='complete')
+            st.success(f"Found tracks in {end - start:.{1}f} seconds")
             track_list.show(result)
         except InvalidUrlException as i:
             st.error(i.message)
@@ -42,3 +46,5 @@ async def app(should_run):
             st.error(t.message)
         except NoSourceException as n:
             st.error(n.message)
+        except MemoryError:
+            st.error("The mix you are trying to ID is too large!")
