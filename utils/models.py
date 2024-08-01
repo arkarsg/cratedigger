@@ -44,7 +44,7 @@ class ShazamAPI:
     
     async def __aenter__(self):
         self.session = aiohttp.ClientSession()
-        self.timeout = aiohttp.ClientTimeout(total=180)
+        self.timeout = aiohttp.ClientTimeout(total=150)
         return self
 
     async def __aexit__(self, exc_type, exc, tb):
@@ -72,8 +72,6 @@ class ShazamAPI:
                 st.warning("You (working) ---> Gateway (working) ---> Server (took too long to respond)")
             else:
                 st.warning("Could not get track information")
-        except Exception as e:
-            st.error("Something went wrong...")
         return None
 
     def _check_limit(self, response):
