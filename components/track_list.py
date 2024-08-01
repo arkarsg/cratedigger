@@ -15,9 +15,9 @@ def write_intro():
 def format_tracks(tracks):
     df = pd.DataFrame([flatten_track(track) for track in tracks])
     df['start'] = pd.to_datetime(df['start'],
-             unit='ms').dt.strftime('%H:%M:%S')
+             unit='s').dt.strftime('%H:%M:%S')
     df['end'] = pd.to_datetime(df['end'],
-             unit='ms').dt.strftime('%H:%M:%S')
+             unit='s').dt.strftime('%H:%M:%S')
     df.sort_values(by=['start'], ascending=True, inplace=True)
     return df
 

@@ -19,7 +19,7 @@ class AudioFileProcessor:
     async def process(self):
         n = self.audio_length_seconds // self.chunk_length
         prog = 0
-        prog_delta = 1 // n
+        prog_delta = 100 // n
         bar = st.progress(prog, text="Analysing chunks...")
 
         async with self.api:
@@ -29,7 +29,7 @@ class AudioFileProcessor:
             ]
             for task in asyncio.as_completed(tasks):
                 await task
-                prog = min(1.0, prog + prog_delta)
+                prog = int(min(100, prog + prog_delta))
                 bar.progress(prog, text="Analysing chunks...")
         bar.progress(100, text="All chunks read!")
         return await self.track_storage.get_tracks()

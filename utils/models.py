@@ -1,7 +1,7 @@
+import asyncio
 from dataclasses import dataclass, field
 import io
 from typing import Any, Dict, Optional
-from config import api_key
 import aiohttp
 import streamlit as st
 
@@ -48,12 +48,17 @@ class ShazamAPI:
     async def __aexit__(self, exc_type, exc, tb):
         await self.session.close()
 
+    async def ping(self):
+        async with self.session.post(url=self.url, headers=self.headers) as response:
+            rate_limit_remainder = response.headers['X-RateLimit-Requests-Remaining']
+            free_plan_remainder = response.headers['X-RateLimit-rapid-free-plans-hard-limit-Remaining']
+            return int(rate_limit_remainder), int(free_plan_remainder) 
+            
     async def get_track_from_chunk(self, chunk: io.BytesIO) -> Optional[Track]:
         try:
             async with self.session.post(url=self.url, headers=self.headers, data=chunk) as response:
                 response.raise_for_status()
                 resp_json = await response.json()
-                print(resp_json)
                 return self._scan_track(resp_json)
         except aiohttp.ClientError as e:
             st.error(f"HTTP error: {e}")

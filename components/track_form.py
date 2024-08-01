@@ -13,7 +13,7 @@ class Form:
         self.file = None
         self.scan_frequency = None
 
-    def display_form(self):
+    def display_form(self, should_run):
         with st.form(key="tracks_uploader", border=False):
             st.write("### 1. Upload **or** paste a link to your mix")
             with st.container(border=True):
@@ -45,7 +45,7 @@ class Form:
                     max_value=60*3,
                     step=5
                 )
-            submitted = st.form_submit_button("Get track IDs")
+            submitted = st.form_submit_button("Get track IDs",disabled=not should_run)
             return submitted
 
     def get_form_data(self):
