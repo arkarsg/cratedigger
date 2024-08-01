@@ -6,20 +6,10 @@ def show(tracks):
         st.info("No tracks found")
         return
     write_intro()
-    tracks_df = format_tracks(tracks)
-    show_table(tracks_df)
+    show_table(tracks)
  
 def write_intro():
-    st.write("## Tracks fished 🎣")
-
-def format_tracks(tracks):
-    df = pd.DataFrame([flatten_track(track) for track in tracks])
-    df['start'] = pd.to_datetime(df['start'],
-             unit='s').dt.strftime('%H:%M:%S')
-    df['end'] = pd.to_datetime(df['end'],
-             unit='s').dt.strftime('%H:%M:%S')
-    df.sort_values(by=['start'], ascending=True, inplace=True)
-    return df
+    st.write("## Tracks digged")
 
 def show_table(df):
     st.dataframe(
@@ -51,11 +41,3 @@ def show_table(df):
         hide_index=True,
         width=800
     )
-
-def flatten_track(track):
-    track_dict =  {
-        "start": track.start_offset,
-        "end": track.end_offset,
-    }
-    res = {**track_dict, **track.track.__dict__}
-    return res
