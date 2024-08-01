@@ -6,11 +6,10 @@ def notify(limit_status):
     elif limit_status == "monthly":
         return notify_plan_limit    
 
-@st.dialog("Hourly limit reached", width="large")
+@st.dialog("Oops!", width="large")
 def notify_rate_limit():
     st.write(
         """
-        ### Oops!
         We have reached the maximum number of music identification requests allowed
         for our free service tier at this hour.
         
@@ -22,11 +21,10 @@ def notify_rate_limit():
         """
     )
     
-@st.dialog("Monthly Plan limit reached", width="large")
+@st.dialog("Oops!", width="large")
 def notify_plan_limit():
     st.write(
         """
-        ### Oops!
         We have reached the maximum number of music identification requests allowed
         for our free service tier.
         
