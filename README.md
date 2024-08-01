@@ -21,6 +21,8 @@ CrateDigger is a Streamlit-based application that allows users to upload audio f
 
 ### Memory Management
 
+**Key achievement** : Reduced memory consumption from 3GB to <800MB
+
 1. **Memory Limitations on Streamlit**
     - CrateDigger is hosted on Streamlit, which imposes a RAM limit of less than 2.7GB. Initially, the application could handle audio sources less than an hour long. However, for mixes around 1 hour, which are common, the application would be killed by Streamlit due to memory constraints.
     - To address this, memory profiling was conducted using `scalene`.
@@ -36,8 +38,6 @@ CrateDigger is a Streamlit-based application that allows users to upload audio f
     AudioSegment.from_file(file, start_second, duration, format="mp3")
     ```
 
-#### Observing memory consumption
-
 `mem_profile_test` provides a helper to test an audio source about 1 hour long.
 
 > Note
@@ -47,6 +47,24 @@ CrateDigger is a Streamlit-based application that allows users to upload audio f
 ```bash
 scalene --memory mem_profile_test.py
 ```
+
+### Observing memory consumption
+
+Following tests were done with a 1-hour DJ mix
+
+#### Chunk size of `60s`
+##### Initial performance
+![high-mem-60](assets/high_mem_60.png)
+
+##### Refactored performance
+![low-mem](assets/low_mem_60.png)
+
+#### Chunk size of `600s`
+##### Initial performance
+![high-mem-600](assets/high_mem_600.png)
+
+##### Refactored performance
+![low-mem-600](assets/low_mem_600.png)
 
 
 ## Developer Guide
