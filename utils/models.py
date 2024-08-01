@@ -72,7 +72,7 @@ class ShazamAPI:
             st.error("Something went wrong...")
         return None
 
-    def _check_limit(response):
+    def _check_limit(self, response):
         rate_limit_remainder = response.headers['X-RateLimit-Requests-Remaining']
         free_plan_remainder = response.headers['X-RateLimit-rapid-free-plans-hard-limit-Remaining']
         if rate_limit_remainder == 0:
