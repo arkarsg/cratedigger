@@ -32,12 +32,6 @@ async def app(should_run):
                 s.update(label="Done", expanded=False, state='complete')
             st.success(f"Found {len(result)} tracks in {end - start:.{1}f} seconds")
             track_list.show(result)
-        except MixTooBigException as m:
-            s.update(label=m.message, expanded=False, state='error')
-        except InvalidUrlException as i:
-            st.error(i.message)
-        except TooManySourceException as t:
-            st.error(t.message)
-        except NoSourceException as n:
-            st.error(n.message)
+        except (MixTooBigException, InvalidUrlException, TooManySourceException, NoSourceException) as e:
+            s.update(label=e.message, expanded=False, state='error')
     

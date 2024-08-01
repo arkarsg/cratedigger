@@ -40,9 +40,11 @@ class ShazamAPI:
             'Content-Type': "application/octet-stream"
         }
         self.session = None
+        self.timeout = None
     
     async def __aenter__(self):
         self.session = aiohttp.ClientSession()
+        self.timeout = aiohttp.ClientTimeout(total=180)
         return self
 
     async def __aexit__(self, exc_type, exc, tb):
@@ -54,7 +56,7 @@ class ShazamAPI:
             
     async def get_track_from_chunk(self, chunk: io.BytesIO) -> Optional[Track]:
         try:
-            async with self.session.post(url=self.url, headers=self.headers, data=chunk) as response:
+            async with self.session.post(url=self.url, headers=self.headers, data=chunk, timeout=self.timeout) as response:
                 limit = self._check_limit(response)
                 if limit:
                     st.rerun()
