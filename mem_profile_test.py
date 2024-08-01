@@ -15,4 +15,5 @@ async def run_profile_high_mem():
 async def run_profile():
     await AudioFileProcessor(file=io.BytesIO(file), chunk_length_in_seconds=600).process()
     
-asyncio.run(run_profile())
+# asyncio.run(run_profile())            # memory optimised
+# asyncio.run(run_profile_high_mem())   # unoptimised
