@@ -1,5 +1,11 @@
 import streamlit as st
 
+def notify(limit_status):
+    if limit_status == "hourly":
+        return notify_rate_limit
+    elif limit_status == "monthly":
+        return notify_plan_limit    
+
 @st.dialog("Hourly limit reached", width="large")
 def notify_rate_limit():
     st.write(

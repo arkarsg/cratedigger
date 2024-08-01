@@ -8,22 +8,14 @@ async def run():
     limit_status = await check_api_limits()
     should_run = True
     if limit_status:
-        if limit_status == "hourly":
-            should_run = False
-            nt.notify_rate_limit()
-        elif limit_status == "monthly":
-            should_run = False
-            nt.notify_plan_limit()
+        nt.notify(limit_status)()
+        should_run = False
     await app(should_run=should_run)
 
 async def check_api_limits():
     async with ShazamAPI() as s:
-        rate_limit_remainder, free_plan_remainder = await s.ping()
-    if rate_limit_remainder == 0:
-        return "hourly"
-    if free_plan_remainder == 0:
-        return "monthly"
-    return None 
+        limit = await s.ping()
+        return limit
 
 async def app(should_run):
     intro.intro()
