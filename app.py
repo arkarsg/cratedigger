@@ -30,7 +30,7 @@ async def app(should_run):
                 result = await querier.query_tracks(data)
                 end = time.time()
                 s.update(label="Done", expanded=False, state='complete')
-            st.success(f"Found tracks in {end - start:.{1}f} seconds")
+            st.success(f"Found {len(result)} tracks in {end - start:.{1}f} seconds")
             track_list.show(result)
         except MixTooBigException as m:
             s.update(label=m.message, expanded=False, state='error')

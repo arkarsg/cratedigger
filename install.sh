@@ -29,8 +29,7 @@ KEY=$1
 # Check if the secrets file exists
 if [ -f "$SECRETS_FILE" ]; then
     # Overwrite the key in the existing file
-    sed -i.bak "s/^key = .*/api_key = \"$KEY\"/" "$SECRETS_FILE"
-    rm "${SECRETS_FILE}.bak"
+    echo "api_key = \"$KEY\"" > "$SECRETS_FILE"
 else
     # Create the directory if it does not exist
     mkdir -p .streamlit
